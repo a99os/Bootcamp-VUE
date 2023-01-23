@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&family=Rubik:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Rubik;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 450px;
+  width: 100%;
+  padding: 15px;
+}
+img {
+  width: 150px;
+  height: 50px;
+  margin-bottom: 70px;
+}
+
+.form__container {
+  height: 800px;
+  margin-top: 50px;
+  padding: 30px 15px 72px;
+  background: #fff;
+  box-shadow: 0px 1px 4px black;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+label {
+  font-size: 16px;
+  line-height: 24px;
+  color: #042668;
+}
+
+input {
+  width: 100%;
+  padding: 15px 14px;
+  background: #f1f6fb;
+  border: 1px solid #e8eef3;
+  border-radius: 8px;
+  outline: none;
+}
+
+input::placeholder {
+  color: #79859e;
+}
+button {
+  margin-bottom: 20px;
+  width: 280px;
+  height: 50px;
+  left: 820px;
+  top: 754px;
+
+  /* RED */
+
+  background: #ec3d5a;
+}
+.font__terms {
+  margin-bottom: 30px;
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #042668;
+}
+.font__control {
+  margin-bottom: 30px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h1 {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+
+  text-align: center;
+
+  color: #073ba1;
+}

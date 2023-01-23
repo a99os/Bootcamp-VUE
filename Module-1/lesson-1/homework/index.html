@@ -12,13 +12,31 @@
     <header>
       <div class="container">
         <nav class="nav">
-          <a href="#" class="nav__logo">
-            <img src="./img/Puma.png" alt="" class="nav__logo-img" />
-            <h2 class="nav__logo-text">PUMA</h2>
+          <a href="#" class="puma__logo">
+            <img src="./img/Group 363.svg" alt="" class="nav__logo-img" />
           </a>
+
           <ul class="nav__list">
-            <li class="nav__list--item">
+            <li class="nav__list--item dropdown">
               <a href="" class="nav__list--item-link active">Menu</a>
+
+              <!-- <ul class="dropdown__menu">
+                <li class="dropdown__menu--item">
+                  <a href="#" class="dropdown__menu--item-link">item-1</a>
+                </li>
+
+                <li class="dropdown__menu--item">
+                  <a href="#" class="dropdown__menu--item-link">item-2</a>
+                </li>
+
+                <li class="dropdown__menu--item">
+                  <a href="#" class="dropdown__menu--item-link">item-3</a>
+                </li>
+
+                <li class="dropdown__menu--item">
+                  <a href="#" class="dropdown__menu--item-link">item-4</a>
+                </li>
+              </ul> -->
             </li>
             <li class="nav__list--item">
               <a href="" class="nav__list--item-link">About</a>
@@ -33,6 +51,7 @@
           <button type="submit" class="nav__btn">Buy now</button>
         </nav>
       </div>
+      <div class="back"></div>
     </header>
     <!-- --------- header finished ---------- -->
 
@@ -51,6 +70,7 @@
                 leo ultrices
               </p>
             </li>
+
             <li class="bigpost__list---item">
               <div class="bigpost__list---item--item">
                 <img
@@ -58,16 +78,380 @@
                   src="./img/krossofka.png"
                   alt=""
                 />
+                <div class="ramka"></div>
+                <img src="./img/tochka.svg" alt="" class="tochka" />
+                <div class="ellipse"></div>
+                <a href="">
+                  <div class="vektor">
+                    <img src="./img/Vector.svg" alt="" class="vektor__img" />
+                  </div>
+                </a>
               </div>
-              <div class="ellipse"></div>
             </li>
-            <li class="bigpost__list---item"></li>
+
+            <li class="bigpost__list---item">
+              <ul class="selection">
+                <li class="selection__items">
+                  <label for="brand" class="selection__items--name"
+                    >Brand
+                  </label>
+                  <select name="" id="brand" class="selection__items--select">
+                    <option
+                      value=""
+                      selected
+                      class="selection__items--select-option"
+                    >
+                      Puma
+                    </option>
+                    <option value="" class="selection__items--select-option">
+                      Adidas
+                    </option>
+                    <option value="" class="selection__items--select-option">
+                      Nike
+                    </option>
+                  </select>
+                </li>
+                <li class="selection__items">
+                  <label for="" class="selection__items--name">Person </label>
+                  <select name="" id="" class="selection__items--select">
+                    <option
+                      value=""
+                      selected
+                      class="selection__items--select-option"
+                    >
+                      man
+                    </option>
+                    <option value="" class="selection__items--select-option">
+                      woman
+                    </option>
+                    <option value="" class="selection__items--select-option">
+                      child
+                    </option>
+                  </select>
+                </li>
+
+                <li class="selection__items">
+                  <label for="" class="selection__items--name">Size </label>
+
+                  <select name="" id="" class="selection__items--select">
+                    <option value="" class="selection__items--select-option">
+                      large
+                    </option>
+                    <option value="" class="selection__items--select-option">
+                      big
+                    </option>
+                    <option value="" class="selection__items--select-option">
+                      small
+                    </option>
+                  </select>
+                </li>
+
+                <li class="selection__items">
+                  <label for="" class="selection__items--name">Price </label>
+
+                  <select name="" id="" class="selection__items--select">
+                    <option
+                      value=""
+                      selected
+                      class="selection__items--select-option"
+                    >
+                      150$
+                    </option>
+                    <option value="" class="selection__items--select-option">
+                      100$
+                    </option>
+                    <option value="" class="selection__items--select-option">
+                      50$
+                    </option>
+                  </select>
+                </li>
+                <li class="selection__items">
+                  <button type="submit" class="nav__btn">Buy now</button>
+                </li>
+              </ul>
+            </li>
           </ul>
         </div>
+
+        <section class="section__video">
+          <ul class="section__video--list">
+            <li class="section__video--list-item">
+              <p class="section__video--list-item-text1">Video</p>
+              <p class="section__video--list-item-text2">
+                Desire the feel of satisfaction.
+              </p>
+              <p class="section__video--list-item-text3">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Egestas
+                leo ultrices commauris risus.
+              </p>
+            </li>
+            <li class="section__video--list-item">
+              <img src="./img/knopkaPlay.svg  " alt="" />
+              <img src="./img/girl1.jpg" alt="" />
+              <img src="./img/girl2.jpg" alt="" />
+            </li>
+          </ul>
+        </section>
+
+        <section class="feature">
+          <p class="feature__title"></p>
+          <p class="feature topic"></p>
+          <ul class="feature__list">
+            <li class="feature__list--item">
+              <div class="feature__list--item-logo">
+                <img src="./img/icon-quanity.png" alt="" />
+              </div>
+              <p class="feature__list--item-title">Quality</p>
+              <p class="feature__list--item-text">
+                Lorem ipsum dolor sit consectetur adipiscing elit. Viverra in ul
+              </p>
+              <a href="" class="feature__list--item-link">Read more ></a>
+            </li>
+            <li class="feature__list--item">
+              <div class="feature__list--item-logo">
+                <img src="./img/icon-flexible.png" alt="" />
+              </div>
+              <p class="feature__list--item-title">Flexible</p>
+              <p class="feature__list--item-text">
+                Lorem ipsum dolor sit consectetur adipiscing elit. Viverra in ul
+              </p>
+              <a href="" class="feature__list--item-link">Read more ></a>
+            </li>
+            <li class="feature__list--item">
+              <div class="feature__list--item-logo">
+                <img src="./img/lon-lasting-icon.png" alt="" />
+              </div>
+              <p class="feature__list--item-title">Long Lasting</p>
+              <p class="feature__list--item-text">
+                Lorem ipsum dolor sit consectetur adipiscing elit. Viverra in ul
+              </p>
+              <a href="" class="feature__list--item-link">Read more ></a>
+            </li>
+          </ul>
+        </section>
+
+        <section class="gallary">
+          <p class="gallary__title">GALLARY</p>
+          <p class="gallary__topic">40+ YEARS’ EXPERIENCE</p>
+          <ul class="gallary__category">
+            <li class="gallary__category--item">Categories:</li>
+            <li class="gallary__category--item">
+              <a href="" class="gallary__category--item-link">All</a>
+            </li>
+            <li class="gallary__category--item">
+              <a href="" class="gallary__category--item-link">Male</a>
+            </li>
+            <li class="gallary__category--item">
+              <a href="" class="gallary__category--item-link">Female</a>
+            </li>
+            <li class="gallary__category--item">
+              <a href="" class="gallary__category--item-link">Kids</a>
+            </li>
+            <ul class="gallary__vektor">
+              <li class="gallary__vektor--vektor1">
+                <a href=""><img src="./img/vektorleft.png" alt="" /></a>
+              </li>
+              <li class="gallary__vektor--vektor2">
+                <a href=""><img src="./img/vektorright.png" alt="" /></a>
+              </li>
+            </ul>
+          </ul>
+
+          <ul class="gallary__card">
+            <li class="gallary__card--item">
+              <img
+                src="./img/krosofka1.jpg"
+                alt=""
+                class="gallary__card--item-image"
+              />
+              <p class="gallary__card--item-title">Puma RS-X Bold</p>
+              <p class="gallary__card--item-size">size: Dubble-XL</p>
+              <p class="gallary__card--item-price">price: $200</p>
+              <button class="gallary__card--item-btn">Buy now</button>
+            </li>
+            <li class="gallary__card--item">
+              <img
+                src="./img/krosofka2.jpg"
+                alt=""
+                class="gallary__card--item-image"
+              />
+              <p class="gallary__card--item-title">Puma Sneakers</p>
+              <p class="gallary__card--item-size">size: Dubble-XL</p>
+              <p class="gallary__card--item-price">price: $180</p>
+              <button class="gallary__card--item-btn">Buy now</button>
+            </li>
+            <li class="gallary__card--item">
+              <img
+                src="./img/krosofka3.png"
+                alt=""
+                class="gallary__card--item-image"
+              />
+              <p class="gallary__card--item-title">Puma Ferrari</p>
+              <p class="gallary__card--item-size">size: Dubble-XL</p>
+              <p class="gallary__card--item-price">price: $190</p>
+              <button class="gallary__card--item-btn">Buy now</button>
+            </li>
+            <li class="gallary__card--item">
+              <img
+                src="./img/krosofka4.png"
+                alt=""
+                class="gallary__card--item-image"
+              />
+              <p class="gallary__card--item-title">Puma Running</p>
+              <p class="gallary__card--item-size">size: Dubble-XL</p>
+              <p class="gallary__card--item-price">price: $200</p>
+              <button class="gallary__card--item-btn">Buy now</button>
+            </li>
+          </ul>
+        </section>
+
+        <section class="testimonials">
+          <img
+            src="./img/testimonials.png"
+            alt=""
+            class="testimonials__image"
+          />
+          <div class="testimonials__card">
+            <img
+              src="./img/AbramKorsgard.png"
+              alt=""
+              class="testimonials__card--image"
+            /><img
+              src="./img/vektorleft.png"
+              alt=""
+              class="testimonials__card--left"
+            /><img
+              src="./img/vektorright.png"
+              alt=""
+              class="testimonials__card--right"
+            /><img
+              src="./img/qoshtirnoq.svg"
+              alt=""
+              class="testimonials__card--logo"
+            />
+            <p class="testimonials__card--title">
+              Their services was best and friendly
+            </p>
+            <p class="p testimonials__card--comment">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus
+              tempor id faucibus quam lobortis.
+            </p>
+            <p class="testimonials__card--author">Abram Korsgaard</p>
+            <p class="testimonials__card--job">Athletic</p>
+          </div>
+        </section>
+
+        <section class="signp">
+          <ul class="signup__list">
+            <li class="signup__list--item">
+              <img
+                src="./img/Puma-photo.png"
+                alt=""
+                class="signup__list--item-img"
+              />
+            </li>
+            <li class="signup__list--item">
+              <p class="signup__list--item-title">Sign up to our Newsletter</p>
+              <p class="signup__list--item-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu
+                sagittis, Atiam lorem sed justo amet viverra in a.
+              </p>
+              <form action="" class="signup__list--item-form">
+                <input
+                  type="text"
+                  placeholder="Enter your email address"
+                  class="signup__list--item-form-input"
+                /><button type="submit" class="signup__list--item-form-btn">
+                  send
+                </button>
+              </form>
+            </li>
+          </ul>
+        </section>
       </div>
     </main>
-    <div class="rectangle"></div>
     <!-- --------- main finished ---------- -->
-    <footer></footer>
+    <footer>
+      <div class="container">
+        <section class="footer__body">
+          <ul class="footer__list">
+            <li class="footer__list--item">
+              <a href="#" class="puma__logo">
+                <img src="./img/Group 363.svg" alt="" class="nav__logo-img" />
+              </a>
+              <p class="footer__list--item-text">
+                10 New Town Street, V2 5NW, Newstate, USA.
+              </p>
+              <p class="footer__list--item-text">shovasatkhira88@gmail.com</p>
+              <ul class="footer__social">
+                <li class="footer__social--logo">
+                  <a href=""
+                    ><img
+                      src="./img/facebook.png"
+                      alt=""
+                      class="footer__socal--logo-img"
+                  /></a>
+                </li>
+                <li class="footer__social--logo">
+                  <a href="">
+                    <img
+                      src="./img/instagram.png"
+                      alt=""
+                      class="footer__socal--logo-img"
+                    />
+                  </a>
+                </li>
+                <li class="footer__social--logo">
+                  <a href="">
+                    <img
+                      src="./img/twitter.svg"
+                      alt=""
+                      class="footer__socal--logo-img"
+                    />
+                  </a>
+                </li>
+                <li class="footer__social--logo">
+                  <a href="">
+                    <img
+                      src="./img/google.png"
+                      alt=""
+                      class="footer__socal--logo-img"
+                    />
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="footer__list--item">
+              <p class="footer__list--item-title">Our services</p>
+              <a href="" class="footer__list--item-link">About us</a>
+              <a href="" class="footer__list--item-link">Feature</a>
+              <a href="" class="footer__list--item-link">Gallary</a>
+            </li>
+            <li class="footer__list--item">
+              <p class="footer__list--item-title">Support</p>
+              <a href="" class="footer__list--item-link">Privacy & Policy</a>
+              <a href="" class="footer__list--item-link">Terms & Condition</a>
+              <a href="" class="footer__list--item-link">Support System</a>
+              <a href="" class="footer__list--item-link"></a>
+            </li>
+            <li class="footer__list--item">
+              <p class="footer__list--item-title">Contact us</p>
+              <p class="footer__list--item-text">
+                Lorem ipsum dolor sit amet consectetur adipiscin
+              </p>
+              <form action="">
+                <input type="text" placeholder="Mail address" />
+                <button type="submit">send</button>
+              </form>
+            </li>
+          </ul>
+        </section>
+        <section class="footer__data">
+          <p class="footer__data--text">
+            Copyright 2021 The PUMA All Rights Reserved.
+          </p>
+        </section>
+      </div>
+    </footer>
   </body>
 </html>
