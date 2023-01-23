@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <div class="product-container">
+      <img
+        class="product-image"
+        src="https://via.placeholder.com/150"
+        alt="Product Image"
+      />
+      <div class="product-info">
+        <h3 class="product-name">Product Name</h3>
+        <p class="product-price">Price: $<span id="price">10</span></p>
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" value="1" />
+        <button class="add-to-cart-btn" onclick="updateTotal()">
+          Add to Cart
+        </button>
+        <p class="product-total">Total: $<span id="total"></span></p>
+      </div>
+    </div>
+
+    <script>
+      function updateTotal() {
+        var quantity = document.getElementById("quantity").value;
+        var price = document.getElementById("price").innerHTML;
+        var total = quantity * price;
+        document.getElementById("total").innerHTML = total;
+      }
+    </script>
+  </body>
+</html>

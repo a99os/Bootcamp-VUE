@@ -1,0 +1,31 @@
+.product-container {
+  display: flex;
+  align-items: center;
+}
+
+.product-image {
+  width: 150px;
+  margin-right: 20px;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-name {
+  margin-bottom: 10px;
+}
+
+.product-price,
+.product-total {
+  margin-bottom: 20px;
+}
+
+.add-to-cart-btn {
+  padding: 10px 20px;
+  background-color: green;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
