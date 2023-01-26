@@ -117,12 +117,13 @@ body {
   position: absolute;
   width: 150px;
   animation-name: car;
-  animation-duration: 12s;
+  animation-duration: 6s;
   animation-fill-mode: forwards;
   animation-delay: 1s;
   animation-timing-function: linear;
   filter: drop-shadow(200px 10px 15px yellow);
   background-position-x: left;
+  animation-iteration-count: 30;
 }
 
 .text {
@@ -130,8 +131,7 @@ body {
   margin: 400px;
   display: none;
   animation-name: txt;
-  animation-duration: 3s;
-  animation-delay: 11s;
+  animation-delay: 6s;
   animation-fill-mode: forwards;
 }
 
@@ -205,21 +205,21 @@ body {
   76% {
     position: absolute;
     width: 150px;
-    left: 0px;
+    left: 50px;
     top: 700px;
     transform: rotate(180deg);
   }
   80% {
     position: absolute;
     width: 150px;
-    left: 0px;
+    left: 50px;
     top: 700px;
     transform: rotate(270deg);
   }
   100% {
     position: absolute;
     width: 150px;
-    left: 0px;
+    left: 50px;
     top: 50px;
     transform: rotate(270deg);
   }
