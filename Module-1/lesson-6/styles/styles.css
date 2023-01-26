@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.circle {
+  background-color: crimson;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: relative;
+  margin: 200px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  font-weight: bold;
+
+  animation-name: circle;
+  animation-duration: 5s;
+  animation-delay: 1s;
+  animation-timing-function: cubic-bezier(0, 1.46, 0.74, -0.25);
+  animation-fill-mode: backwards;
+  animation-direction: alternate;
+  animation-play-state: paused;
+  animation-iteration-count: 2;
+}
+.circle:hover {
+  animation-play-state: running;
+}
+
+@keyframes circle {
+  from {
+    background-color: crimson;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: relative;
+    margin: 200px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+  }
+  to {
+    background-image: url("http://picsum.photos/id/320/900/700");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 0%;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+  }
+}
