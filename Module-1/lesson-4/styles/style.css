@@ -198,7 +198,6 @@ header {
 
 .about-image-info {
   background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(8px);
   border-radius: 20px;
   position: absolute;
   width: 197px;
@@ -449,7 +448,6 @@ header {
   width: 127px;
   height: 92px;
   background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(8px);
   border-radius: 20px;
   display: flex;
   justify-content: space-evenly;

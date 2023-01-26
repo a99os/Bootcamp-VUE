@@ -1,0 +1,54 @@
+.hero {
+  width: 100%;
+  &__container {
+    position: relative;
+    height: 600px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../../images/hero-minimalist.jpg");
+    &---info {
+      position: absolute;
+      max-width: 445px;
+      height: 357px;
+      background-color: $text-white;
+      bottom: 0;
+      left: 0;
+      &--title {
+        font-family: "ibarraBold";
+        margin: 56px 55px 101px 0px;
+        font-size: 50px;
+        line-height: 50px;
+        color: $text-color;
+        letter-spacing: -0.446429px;
+      }
+      &--btn {
+        position: absolute;
+        display: flex;
+        bottom: 0px;
+        border: 0px;
+        width: 200px;
+        height: 48px;
+        background-color: $button-color;
+        align-items: center;
+        cursor: pointer;
+        img {
+          width: 48px;
+        }
+        span {
+          color: $text-white;
+          font-family: "publicRegular";
+          font-size: 12px;
+          line-height: 14px;
+          text-align: center;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          width: 152px;
+        }
+        &:hover {
+          background-color: $active;
+        }
+      }
+    }
+  }
+}

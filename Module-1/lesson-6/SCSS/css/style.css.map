@@ -1,0 +1,1 @@
+{"version":3,"sources":["../SCSS/general.scss","style.css","../SCSS/blocks/_container.scss","../SCSS/blocks/_footer.scss","../SCSS/blocks/_header.scss","../SCSS/blocks/_main.scss"],"names":[],"mappings":"AAAA;EACE,SAAA;EACA,UAAA;EACA,sBAAA;ACCF;;ACJA;EAEE,yBAAA;EACA,0BAAA;ADMF;;AETA;EACE,WAAA;AFYF;;AGbA;EACE,WAAA;AHgBF;;AIjBA;EACE,WAAA;AJoBF","file":"style.css"}

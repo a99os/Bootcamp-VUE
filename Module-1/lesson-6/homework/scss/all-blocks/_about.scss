@@ -1,0 +1,53 @@
+.about {
+  width: 100%;
+  padding: 150px 0px;
+  &__container {
+    display: flex;
+    &--img {
+      width: 540px;
+      height: 600px;
+    }
+    &---info {
+      margin-left: 125px;
+      width: 350px;
+      height: 600px;
+      padding: 50px 0px 46px 0px;
+      border-top: 1px solid $border-color;
+      border-bottom: 1px solid $border-color;
+      &--title {
+        width: 350px;
+        height: 42px;
+        font-family: "ibarraBold";
+        color: $text-color;
+        margin: 0px;
+      }
+      &--text {
+        margin-top: 28px;
+        width: 350px;
+        height: 360px;
+        font-family: "publicRegular";
+        color: $text-color;
+        line-height: 30px;
+        opacity: 80%;
+      }
+      &--link {
+        text-decoration: none;
+        color: $text-color;
+        font-family: "publicRegular";
+        font-size: 12px;
+        display: block;
+        margin-top: 24px;
+        width: 202px;
+        height: 48px;
+        padding: 17px 32px;
+        border: 1px solid $text-color;
+        line-height: 14.1px;
+        letter-spacing: 2px;
+        &:hover {
+          color: $text-white;
+          background-color: $text-color;
+        }
+      }
+    }
+  }
+}
