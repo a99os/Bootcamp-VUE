@@ -1,0 +1,40 @@
+.contact {
+  width: 100%;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &--contact {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 150px;
+      &-text {
+        margin: 0;
+        width: 350px;
+        font-family: "ibarraBold";
+        font-size: 40px;
+        line-height: 42px;
+        color: $text-color;
+        letter-spacing: -0.36px;
+      }
+      &-btn {
+        text-decoration: none;
+        color: $text-color;
+        font-family: "publicRegular";
+        font-size: 12px;
+        display: block;
+        margin: auto 0px;
+        width: 163px;
+        height: 48px;
+        padding: 17px 32px;
+        border: 1px solid $text-color;
+        line-height: 14px;
+        letter-spacing: 2px;
+        &:hover {
+          color: $text-white;
+          background-color: $text-color;
+        }
+      }
+    }
+  }
+}

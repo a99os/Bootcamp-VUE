@@ -410,10 +410,6 @@ img {
   color: #5fb4a2;
 }
 
-.main {
-  flex-grow: 1;
-}
-
 .hero {
   width: 100%;
 }
@@ -469,6 +465,48 @@ img {
   background-color: #5fb4a2;
 }
 
+.footer {
+  max-width: 100%;
+  background-color: #33323d;
+}
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.footer__container---nav {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer__container---nav--list {
+  width: 415px;
+  display: flex;
+  justify-content: space-between;
+}
+.footer__container---nav--list-item {
+  list-style-type: none;
+}
+.footer__container---nav--list-item a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.footer__container---nav--list-item a:hover {
+  color: #eaeaeb;
+}
+.footer__container---nav--logos {
+  display: flex;
+  justify-content: space-between;
+  width: 104px;
+}
+.footer__container---nav--logos-logo {
+  list-style-type: none;
+}
+.footer__container---nav--logos-logo a {
+  text-decoration: none;
+}
+
 .about {
   width: 100%;
   padding: 150px 0px;
@@ -519,6 +557,47 @@ img {
   letter-spacing: 2px;
 }
 .about__container---info--link:hover {
+  color: #ffffff;
+  background-color: #33323d;
+}
+
+.contact {
+  width: 100%;
+}
+.contact__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.contact__container--contact {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 150px;
+}
+.contact__container--contact-text {
+  margin: 0;
+  width: 350px;
+  font-family: "ibarraBold";
+  font-size: 40px;
+  line-height: 42px;
+  color: #33323d;
+  letter-spacing: -0.36px;
+}
+.contact__container--contact-btn {
+  text-decoration: none;
+  color: #33323d;
+  font-family: "publicRegular";
+  font-size: 12px;
+  display: block;
+  margin: auto 0px;
+  width: 163px;
+  height: 48px;
+  padding: 17px 32px;
+  border: 1px solid #33323d;
+  line-height: 14px;
+  letter-spacing: 2px;
+}
+.contact__container--contact-btn:hover {
   color: #ffffff;
   background-color: #33323d;
 }/*# sourceMappingURL=main.css.map */

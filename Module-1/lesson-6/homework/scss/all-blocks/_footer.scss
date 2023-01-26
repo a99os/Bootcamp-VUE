@@ -1,0 +1,41 @@
+.footer {
+  max-width: 100%;
+  background-color: $text-color;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &---nav {
+      height: 80px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &--list {
+        width: 415px;
+        display: flex;
+        justify-content: space-between;
+        &-item {
+          list-style-type: none;
+          a {
+            text-decoration: none;
+            color: $text-white;
+            &:hover {
+              color: $border-color;
+            }
+          }
+        }
+      }
+      &--logos {
+        display: flex;
+        justify-content: space-between;
+        width: 104px;
+        &-logo {
+          list-style-type: none;
+          a {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
