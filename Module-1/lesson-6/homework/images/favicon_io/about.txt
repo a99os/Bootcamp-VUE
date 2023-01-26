@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Merienda
+- Font Author: Copyright 2017 The Merienda Project Authors (https://github.com/etunni/merienda)
+- Font Source: http://fonts.gstatic.com/s/merienda/v17/gNMaW3x8Qoy5_mf8uUkJGHtiYXjmKFy5enhoSU78QGBV0A.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))

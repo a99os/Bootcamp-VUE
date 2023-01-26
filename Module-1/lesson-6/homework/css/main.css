@@ -551,10 +551,11 @@ img {
   margin-top: 24px;
   width: 202px;
   height: 48px;
-  padding: 17px 32px;
+  padding: 17px;
   border: 1px solid #33323d;
   line-height: 14.1px;
   letter-spacing: 2px;
+  text-align: center;
 }
 .about__container---info--link:hover {
   color: #ffffff;
@@ -583,6 +584,12 @@ img {
   color: #33323d;
   letter-spacing: -0.36px;
 }
+.contact__container--contact-line {
+  width: 531px;
+  height: 1px;
+  margin-top: 48px;
+  background-color: #eaeaeb;
+}
 .contact__container--contact-btn {
   text-decoration: none;
   color: #33323d;
@@ -590,14 +597,79 @@ img {
   font-size: 12px;
   display: block;
   margin: auto 0px;
-  width: 163px;
+  width: 162px;
   height: 48px;
-  padding: 17px 32px;
+  text-align: center;
+  padding: 17px;
   border: 1px solid #33323d;
   line-height: 14px;
   letter-spacing: 2px;
 }
 .contact__container--contact-btn:hover {
+  color: #ffffff;
+  background-color: #33323d;
+}
+
+.portfolio {
+  width: 100%;
+}
+.portfolio__container {
+  padding: 30px 0px 50px;
+  display: flex;
+  align-items: center;
+}
+.portfolio__container--img {
+  width: 540px;
+  height: 500px;
+}
+.portfolio__container:nth-child(2) {
+  align-items: flex-end;
+}
+.portfolio__container:nth-child(4) {
+  align-items: flex-end;
+}
+.portfolio__container--info {
+  margin: 0px 125px;
+  width: 350px;
+  height: 100%;
+  padding: 103px 0px;
+  border-top: 1px solid #eaeaeb;
+  border-bottom: 1px solid #eaeaeb;
+  align-items: center;
+}
+.portfolio__container--info h1 {
+  width: 350px;
+  height: 42px;
+  font-family: "ibarraBold";
+  color: #33323d;
+  margin: 0px;
+}
+.portfolio__container--info p {
+  margin-top: 28px;
+  width: 350px;
+  font-family: "publicRegular";
+  color: #33323d;
+  font-size: 16px;
+  line-height: 30px;
+  opacity: 80%;
+}
+.portfolio__container--info a {
+  margin-top: 24px;
+  text-decoration: none;
+  padding-top: 17px;
+  color: #33323d;
+  font-family: "publicRegular";
+  font-size: 12px;
+  display: block;
+  text-align: center;
+  width: 175px;
+  height: 48px;
+  border: 1px solid #33323d;
+  line-height: 14.1px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+.portfolio__container--info a:hover {
   color: #ffffff;
   background-color: #33323d;
 }/*# sourceMappingURL=main.css.map */
