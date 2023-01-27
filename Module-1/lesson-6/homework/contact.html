@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/main.min.css" />
-    
+
     <title>Contact</title>
   </head>
   <body>
@@ -39,85 +39,73 @@
         </nav>
       </div>
     </header>
-    <section class="portfolio">
-      <div class="container portfolio__container">
-        <img
-          src="./images/Group 5.jpg"
-          alt=""
-          class="portfolio__container--img"
-        />
-        <div class="portfolio__container--info">
-          <h1>Manage</h1>
-          <p>
-            This project required me to build a fully responsive landing page to
-            the designs provided. I used HTML5, along with CSS Grid and
-            JavaScript for the areas that required interactivity, such as the
-            testimonial slider.
-          </p>
-          <a href="">VIEW PROJECT</a>
+    <section class="touch">
+      <div class="container touch__container">
+        <div class="touch__container--title">
+          <h1>Get in Touch</h1>
         </div>
-      </div>
-      <div class="container portfolio__container">
-        <div class="portfolio__container--info">
-          <h1>Bookmark</h1>
+        <div class="touch__container--info">
           <p>
-            This project required me to build a fully responsive landing page to
-            the designs provided. I used HTML5, along with CSS Grid and
-            JavaScript for the areas that required interactivity, such as the
-            features section.
+            I’d love to hear about what you’re working on and how I could help.
+            I’m currently looking for a new role and am open to a wide range of
+            opportunities. My preference would be to find a position in a
+            company in London. But I’m also happy to hear about opportunites
+            that don’t fit that description. I’m a hard-working and positive
+            person who will always approach each task with a sense of purpose
+            and attention to detail. Please do feel free to check out my online
+            profiles below and get in touch using the form.
           </p>
-          <a href="">VIEW PROJECT</a>
+          <ul class="touch__container--info--logos">
+            <li class="touch__container--info--logos-logo">
+              <a href=""><img src="./images/Path.svg" alt="github logo" /></a>
+            </li>
+            <li class="touch__container--info--logos-logo">
+              <a href=""><img src="./images/Path1.svg" alt="twitter logo" /></a>
+            </li>
+            <li class="touch__container--info--logos-logo">
+              <a href=""
+                ><img src="./images/Shape.svg" alt="linkedin logo"
+              /></a>
+            </li>
+          </ul>
         </div>
-        <img
-          src="./images/Group 6.jpg"
-          alt=""
-          class="portfolio__container--img"
-        />
-      </div>
-      <div class="container portfolio__container">
-        <img
-          src="./images/Group 7.jpg"
-          alt=""
-          class="portfolio__container--img"
-        />
-        <div class="portfolio__container--info">
-          <h1>Insure</h1>
-          <p>
-            This was a small project which mostly consisted of HTML and CSS. I
-            built a fully-responsive landing page. The only JavaScript this
-            project required was to enable the toggling of the mobile
-            navigation.
-          </p>
-          <a href="">VIEW PROJECT</a>
-        </div>
-      </div>
-      <div class="container portfolio__container">
-        <div class="portfolio__container--info">
-          <h1>Fylo</h1>
-          <p>
-            This project was built in pure HTML and CSS. I had mobile and
-            desktop designs to work to and built it so that it was
-            fully-responsive. I took a mobile-first approach and used modern CSS
-            like Flexbox and Grid for layout purposes.
-          </p>
-          <a href="">VIEW PROJECT</a>
-        </div>
-        <img
-          src="./images/Group 8.jpg"
-          alt=""
-          class="portfolio__container--img"
-        />
       </div>
     </section>
-    <section class="contact">
-      <div class="container contact__container">
-        <div class="contact__container--contact">
-          <h1 class="contact__container--contact-text">
-            Interested in doing a project together?
-          </h1>
-          <div class="contact__container--contact-line"></div>
-          <a href="" class="contact__container--contact-btn">CONTACT ME</a>
+
+    <section class="form">
+      <div class="container form__container">
+        <div class="form__container--title">
+          <h1>Contact Me</h1>
         </div>
+        <form action="" class="form__container--form">
+          <label for="name">Name</label>
+          <input
+            required
+            type="text"
+            class="form__container--form-short"
+            placeholder="Jane Applessed"
+            id="name"
+          />
+          <label for="email">Email Address</label>
+          <input
+            required
+            type="email"
+            placeholder="email@example.com"
+            class="form__container--form-short"
+            id="email"
+          />
+          <label for="message">Message</label>
+          <input
+            required
+            type="text"
+            placeholder="How can I help?"
+            class="form__container--form-big"
+            id="message"
+          />
+          <button class="form__container--form-btn" type="submit">
+            SEND MESSAGE
+          </button>
+        </form>
       </div>
     </section>
 
@@ -131,13 +119,13 @@
               <a href=""><img src="./images/logo-footer.svg" alt="" /></a>
             </li>
             <li class="footer__container---nav--list-item">
-              <a href="">HOME</a>
+              <a href="./index.html">HOME</a>
             </li>
             <li class="footer__container---nav--list-item">
-              <a href="">PORTFOLIO</a>
+              <a href="./portfolio.html">PORTFOLIO</a>
             </li>
             <li class="footer__container---nav--list-item">
-              <a href="">CONTACT ME</a>
+              <a href="./contact.html">CONTACT ME</a>
             </li>
           </ul>
           <ul class="footer__container---nav--logos">

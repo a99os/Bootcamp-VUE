@@ -61,3 +61,69 @@
     }
   }
 }
+@media only screen and (max-width: 768px) {
+  .portfolio {
+    width: 100%;
+    &__container {
+      padding: 30px 0px 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around ;
+      &--img {
+        width: 380px;
+        height: 314px;
+      }
+      &:nth-child(2) {
+        align-items: flex-end;
+      }
+      &:nth-child(4) {
+        align-items: flex-end;
+      }
+      &--info {
+        margin: 0px 0px;
+        width: 281px;
+        height: 100%;
+        padding: 103px 0px;
+        border-top: 1px solid $border-color;
+        border-bottom: 1px solid $border-color;
+        align-items: center;
+        h1 {
+          width: 281px;
+          height: 42px;
+          font-family: "ibarraBold";
+          color: $text-color;
+          margin: 0px;
+        }
+        p {
+          margin-top: 28px;
+          width: 281px;
+          font-family: "publicRegular";
+          color: $text-color;
+          font-size: 16px;
+          line-height: 30px;
+          opacity: 80%;
+        }
+        a {
+          margin-top: 24px;
+          text-decoration: none;
+          padding-top: 17px;
+          color: $text-color;
+          font-family: "publicRegular";
+          font-size: 12px;
+          display: block;
+          text-align: center;
+          width: 175px;
+          height: 48px;
+          border: 1px solid $text-color;
+          line-height: 14.1px;
+          letter-spacing: 2px;
+          text-align: center;
+          &:hover {
+            color: $text-white;
+            background-color: $text-color;
+          }
+        }
+      }
+    }
+  }
+}

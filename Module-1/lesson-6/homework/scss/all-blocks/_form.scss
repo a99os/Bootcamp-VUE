@@ -1,0 +1,194 @@
+.form {
+  width: 100%;
+  &__container {
+    height: 582px;
+    display: flex;
+    margin-top: 30px;
+    padding: 48px 0px;
+    align-items: flex-start;
+    border-top: 1px solid $border-color;
+    &--title {
+      margin: 0;
+      width: 50%;
+      height: 42px;
+      h1 {
+        width: 350px;
+        height: 42px;
+        margin: 0;
+        font-family: ibarraBold;
+        font-size: 40px;
+        color: $text-color;
+      }
+    }
+
+    &--form {
+      width: 635px;
+      height: 426px;
+      label {
+        display: block;
+        font-family: "publicBold";
+        font-size: 13px;
+        color: $text-color;
+        height: 30px;
+        padding: 10px 0px;
+      }
+      input:invalid {
+        border: 1px solid $erors;
+      }
+
+      &-short {
+        margin-top: 8px;
+        height: 48px;
+        padding: 9px 16px;
+        width: 100%;
+        border: none;
+        background-color: $border-color;
+        font-family: "publicRegular";
+        font-size: 13px;
+        line-height: 30px;
+        color: $text-color;
+        outline: none;
+        &:focus {
+          border: 1px solid $active;
+        }
+      }
+      &-big {
+        margin-top: 8px;
+
+        height: 96px;
+        padding: 40px 16px;
+        width: 100%;
+        border: none;
+        background-color: $border-color;
+        font-family: "publicRegular";
+        font-size: 13px;
+        line-height: 30px;
+        color: $text-color;
+        outline: none;
+
+        &:focus {
+          border: 1px solid $active;
+        }
+      }
+      &-btn {
+        margin-top: 24px;
+        text-align: center;
+        border: 0px;
+        width: 200px;
+        height: 48px;
+        background-color: $button-color;
+        align-items: center;
+        cursor: pointer;
+        color: $text-white;
+        font-family: "publicRegular";
+        font-size: 12px;
+        line-height: 14px;
+        text-align: center;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        &:hover {
+          background-color: $active;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .form {
+    width: 100%;
+    &__container {
+      height: 582px;
+      display: flex;
+      flex-direction: column;
+      margin-top: 30px;
+      padding: 48px 40px;
+      align-items: flex-start;
+      border-top: 1px solid $border-color;
+      &--title {
+        margin: 0;
+        width: 50%;
+        height: 42px;
+        h1 {
+          width: 350px;
+          height: 42px;
+          margin: 0;
+          font-family: ibarraBold;
+          font-size: 40px;
+          color: $text-color;
+        }
+      }
+
+      &--form {
+        width: 635px;
+        height: 426px;
+        label {
+          display: block;
+          font-family: "publicBold";
+          font-size: 13px;
+          color: $text-color;
+          height: 30px;
+          padding: 10px 0px;
+        }
+        input:invalid {
+          border: 1px solid $erors;
+        }
+
+        &-short {
+          margin-top: 8px;
+          height: 48px;
+          padding: 9px 16px;
+          width: 100%;
+          border: none;
+          background-color: $border-color;
+          font-family: "publicRegular";
+          font-size: 13px;
+          line-height: 30px;
+          color: $text-color;
+          outline: none;
+          &:focus {
+            border: 1px solid $active;
+          }
+        }
+        &-big {
+          margin-top: 8px;
+
+          height: 96px;
+          padding: 40px 16px;
+          width: 100%;
+          border: none;
+          background-color: $border-color;
+          font-family: "publicRegular";
+          font-size: 13px;
+          line-height: 30px;
+          color: $text-color;
+          outline: none;
+
+          &:focus {
+            border: 1px solid $active;
+          }
+        }
+        &-btn {
+          margin-top: 24px;
+          text-align: center;
+          border: 0px;
+          width: 200px;
+          height: 48px;
+          background-color: $button-color;
+          align-items: center;
+          cursor: pointer;
+          color: $text-white;
+          font-family: "publicRegular";
+          font-size: 12px;
+          line-height: 14px;
+          text-align: center;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          &:hover {
+            background-color: $active;
+          }
+        }
+      }
+    }
+  }
+}

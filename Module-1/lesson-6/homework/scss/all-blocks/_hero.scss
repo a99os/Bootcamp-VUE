@@ -52,3 +52,62 @@
     }
   }
 }
+@media only screen and (max-width: 768px) {
+  .hero {
+    width: 100%;
+    &__container {
+      position: relative;
+      height: 600px;
+      background-size: 688px 600px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url("../../images/hero-minimalist.jpg");
+      &---info {
+        padding: 0px 40px;
+        position: absolute;
+        max-width: 514px;
+        height: 278px;
+        background-color: $text-white;
+        bottom: 0;
+        left: 0;
+        &--title {
+          max-width: 458px;
+          height: 126px;
+          font-family: "ibarraBold";
+          margin: 56px 55px 101px 0px;
+          font-size: 39px;
+          line-height: 42px;
+          color: $text-color;
+          letter-spacing: -0.446429px;
+        }
+        &--btn {
+          position: absolute;
+          display: flex;
+          bottom: 0px;
+          border: 0px;
+          width: 200px;
+          height: 48px;
+          background-color: $button-color;
+          align-items: center;
+          cursor: pointer;
+          img {
+            width: 48px;
+          }
+          span {
+            color: $text-white;
+            font-family: "publicRegular";
+            font-size: 12px;
+            line-height: 14px;
+            text-align: center;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            width: 152px;
+          }
+          &:hover {
+            background-color: $active;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,8 +1,11 @@
 .header {
+  width: 100%;
   padding: 64px 0 54px;
   &__container {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
+}
+@media only screen and (max-width: 375px) {
 }
