@@ -361,6 +361,7 @@ module.exports = {
       DEFAULT: '1',
     },
     fontFamily: {
+      ceraBold:["CeraRoundPro-Bold"],
       sans: [
         'ui-sans-serif',
         'system-ui',
