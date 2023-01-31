@@ -1,7 +1,6 @@
 .nav {
   max-width: 305px;
   width: 100%;
-
   &__list {
     display: flex;
     align-items: center;
@@ -22,4 +21,35 @@
     }
   }
 }
+@media only screen and (max-width: 375px) {
+  .header__container {
+    padding: 0px;
+  }
+  .nav {
+    max-width: 305px;
+    width: 100%;
 
+    &__list {
+      display: none;
+      align-items: center;
+      justify-content: space-between;
+      list-style: none;
+      &--item {
+        &-link {
+          text-decoration: none;
+          color: $text-color;
+
+          &:active {
+            color: $active;
+          }
+        }
+        .active {
+          color: $active;
+        }
+      }
+    }
+  }
+  .dropdown{
+    z-index: 10000;
+  }
+}
