@@ -75,7 +75,7 @@
             <li class="nav__menu--item">
               <button
                 type="submit"
-                class="bg-green-600 px-6 py-2 rounded-lg text-white hover:bg-green-700 duration-300 active:text-black active:bg-green-100"
+                class="register-btn bg-green-600 px-6 py-2 rounded-lg text-white hover:bg-green-700 duration-300 active:text-black active:bg-green-100"
               >
                 Register now
               </button>
@@ -86,8 +86,9 @@
     </header>
     <!-- header finished -->
 
+    <!-- modal started -->
     <div
-      class="modal-window bg-[#00000081] w-full min-h-screen fixed top-0 z-10 backdrop-blur-sm"
+      class="modal-window hidden bg-[#00000081] w-full min-h-screen fixed top-0 z-10 backdrop-blur-sm"
     >
       <div
         class="modal-content w-[800px] min-h-[580px] bg-white mx-auto mt-40 rounded-2xl overflow-hidden shadow-md shadow-slate-900"
@@ -138,7 +139,7 @@
               />
             </label>
             <button
-              class="btn block mx-auto w-[80%] my-4 bg-green-600 px-4 py-2 rounded-lg m-3 text-white font-bold hover:bg-green-700 focus:ring-4 focus:ring-green-400 duration-200"
+              class="btn block mx-auto w-[80%] my-4 bg-green-500 px-4 py-2 rounded-lg m-3 text-white font-bold hover:bg-green-700 focus:ring-4 focus:ring-green-400 duration-200"
             >
               SIGN UP
             </button>
@@ -148,13 +149,14 @@
         <div class="modal-footer bg-slate-200 text-right p-2">
           <button
             type="submit"
-            class="bg-red-600 px-4 py-2 rounded-lg m-3 text-white font-bold hover:bg-red-700 focus:ring-4 focus:ring-red-400 duration-200"
+            class="close-btn bg-red-600 px-4 py-2 rounded-lg m-3 text-white font-bold hover:bg-red-700 focus:ring-4 focus:ring-red-400 duration-200"
           >
             Close
           </button>
         </div>
       </div>
     </div>
+    <!-- modal finished -->
 
     <script src="./scripts/index.js"></script>
   </body>
