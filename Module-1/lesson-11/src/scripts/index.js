@@ -1,4 +1,6 @@
 "use strict";
+// ! --------------------- Modal window ---------------------------------------
+
 const modalWindow = document.querySelector(".modal-window"),
   signUpBtn = document.querySelector(".register-btn"),
   modalContent = document.querySelector(".modal-content"),
@@ -18,6 +20,7 @@ modalWindow.addEventListener("click", (e) => {
 });
 
 // ! ------------------ Dinamic elemnts ---------------------------------------
+
 const introProduct = document.querySelector(".intro__product--info");
 let cards = [
   { id: 1, img: "./images/user 1.svg", title: "30K", description: "UserOrder" },
@@ -31,7 +34,7 @@ let cards = [
 ];
 const createElement = (tagName, className, content) => {
   const element = document.createElement(tagName);
-  if (className) element.classList.add(className);
+  if (className) element.setAttribute("class", className);
   if (content) element.innerHTML = content;
   return element;
 };
@@ -39,18 +42,14 @@ const createElement = (tagName, className, content) => {
 cards.forEach((items) => {
   const newElement = createElement(
     "div",
-    "",
-    ` <div
-  class="card mb-[30px] hover:shadow-lg bg-white flex justify-between pl-[34px] pr-[46px] py-[17px] rounded-sm items-center"
->
-  <span class="p-3 bg-green-50 rounded-full">
+    "card mb-[30px] hover:shadow-lg bg-white flex justify-between pl-[34px] pr-[46px] py-[17px] rounded-sm items-center",
+    ` <span class="p-3 bg-green-50 rounded-full">
     <img src="${items.img}" alt=""
   /></span>
   <div class="flex flex-col ml-3">
     <h2 class="font-normal text-5xl">${items.title}</h2>
     <p class="font-normal text-lg leading-[30px]">${items.description}</p>
-  </div>
-</div>`
+  </div>`
   );
   introProduct.append(newElement);
 });
