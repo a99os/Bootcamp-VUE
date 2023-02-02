@@ -53,3 +53,70 @@ cards.forEach((items) => {
   );
   introProduct.append(newElement);
 });
+
+let icon = document.querySelector(".icon");
+
+// icon.onclick = (e) => {
+//   console.log((e.target.style.color = "red"));
+// };
+icon.addEventListener("mouseup", (e) => {
+  console.log("UP");
+});
+icon.addEventListener("mousedown", (e) => {
+  console.log("DOWN");
+});
+
+window.addEventListener("mousemove", (e) => {
+  console.log(e.target);
+});
+
+// ! product info dinamic
+let productInfoItems = [
+  {
+    id: 1,
+    img: "./images/delivery-man 2.svg",
+    title: "Fasted delivery Service",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+  },
+  {
+    id: 2,
+    img: "./images/shopping 1.svg",
+    title: "Online order Service",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+  },
+  {
+    id: 3,
+    img: "./images/fast-time 1.svg",
+    title: "24/8 Service",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+  },
+];
+const productInfo = document.querySelector(".info__content---items");
+
+productInfoItems.forEach((item) => {
+  const element = createElement(
+    "div",
+    "info__content---items-item w-[500px] h-[160px] px-[60px] py-10  hover:bg-green-50",
+    `
+    <div class="flex justify-around">
+      <div
+        class="info__content---items-item-logo bg-green-50 w-20 h-20 flex items-center justify-center rounded-full"
+      >
+        <img src="${item.img}" alt="delivery-man" />
+      </div>
+      <div>
+        <h3 class="font-bold text-5 leading-[30px]">
+        ${item.title}
+        </h3>
+        <p
+          class="font-normal text-[14px] leading-5 w-[277px] text-[#555555]"
+        >${item.description}
+        </p>
+      </div>
+    </div>`
+  );
+  productInfo.append(element);
+});

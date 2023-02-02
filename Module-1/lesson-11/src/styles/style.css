@@ -18,3 +18,13 @@ body {
     transform: translate(0px, -5px);
   }
 }
+.info__content---items-item:hover .info__content---items-item-logo {
+  background-color: white;
+}
+
+.left-icon:hover .bx-chevron-left {
+  color: white;
+}
+.right-icon:hover .bx-chevron-right {
+  color: white;
+}
