@@ -165,7 +165,7 @@ const list = document.querySelector(".list");
 coruselData.forEach((item) => {
   const element = createElement(
     "div",
-    "explore__wrapper flex pt-[89px] pb-[143px] relative duration-500 min-w-[1239px]  ",
+    "explore__wrapper swiper-slide flex pt-[89px] pb-[143px] relative duration-500 min-w-[1239px]  ",
     `<div class="explore__info">
   <h1
     class="text-6xl font-bold w-[640px] mb-[20px] leading-[90px] mt-[20px]"
@@ -195,30 +195,30 @@ coruselData.forEach((item) => {
 const explore__wrapper = document.querySelectorAll(".explore__wrapper");
 const leftBtn = document.querySelector(".left-icon");
 const rightBtn = document.querySelector(".right-icon");
-let count = 0;
-function slider() {
-  if (count === coruselData.length) {
-    count = 0;
-  }
-  if (count < 0) {
-    count = coruselData.length - 1;
-  }
-  list.style.transform = `translateX(-${count * 1239}px)`;
-}
-const playCarusel = setInterval(() => {
-  count++;
-  slider();
-}, 3500);
+// let count = 0;
+// function slider() {
+//   if (count === coruselData.length) {
+//     count = 0;
+//   }
+//   if (count < 0) {
+//     count = coruselData.length - 1;
+//   }
+//   list.style.transform = `translateX(-${count * 1239}px)`;
+// }
+// const playCarusel = setInterval(() => {
+//   count++;
+//   slider();
+// }, 3500);
 
-rightBtn.addEventListener("click", () => {
-  count++;
-  slider();
-  list.style.transform = `translateX(-${count * 1239}px)`;
-  clearInterval(playCarusel);
-});
-leftBtn.addEventListener("click", () => {
-  count--;
-  slider();
-  list.style.transform = `translateX(-${count * 1239}px)`;
-  clearInterval(playCarusel);
-});
+// rightBtn.addEventListener("click", () => {
+//   count++;
+//   slider();
+//   list.style.transform = `translateX(-${count * 1239}px)`;
+//   clearInterval(playCarusel);
+// });
+// leftBtn.addEventListener("click", () => {
+//   count--;
+//   slider();
+//   list.style.transform = `translateX(-${count * 1239}px)`;
+//   clearInterval(playCarusel);
+// });
