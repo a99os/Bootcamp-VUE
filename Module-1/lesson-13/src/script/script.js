@@ -10,6 +10,9 @@ const mainList = document.querySelector(".list");
 const delTask = document.querySelectorAll(".del");
 const editTask = document.querySelectorAll(".edit");
 const checkTask = document.querySelectorAll(".check");
+const modal = document.querySelector(".modal");
+const editForm = document.querySelector("#editForm");
+const task_modal = document.querySelector(".task_modal");
 
 // !--------------- task list---------------
 let task = [
@@ -113,6 +116,7 @@ submitForm.addEventListener("submit", (e) => {
   countTaskDone(task);
 });
 // !--------------- add new task  finished---------------
+// !--------------- delete task  started---------------
 mainList.addEventListener("click", (e) => {
   if (e.target.classList.contains("del")) {
     const id = e.target.getAttribute("data-del");
@@ -120,5 +124,48 @@ mainList.addEventListener("click", (e) => {
     mainList.innerHTML = null;
     renderTasklist(task);
     countTaskDone(task);
+  } else if (e.target.classList.contains("check")) {
+    const id = e.target.getAttribute("data-check");
+    task.forEach((task) => {
+      if (task.id == id) {
+        task.status ? (task.status = false) : (task.status = true);
+      }
+    });
+    mainList.innerHTML = null;
+    renderTasklist(task);
+    countTaskDone(task);
+  } else if (e.target.classList.contains("edit")) {
+    const id = e.target.getAttribute("data-edit");
+    task.forEach((task) => {
+      if (task.id == id) {
+        task_modal.id = id;
+        task_modal.value = task.title;
+        console.log(task_modal);
+        modal.classList.remove("hidden");
+        modal.classList.add("block");
+      }
+    });
   }
 });
+
+editForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const id = task_modal.id;
+  console.log("Salom");
+  console.log(task_modal.value);
+  console.log("Hayr");
+  task.forEach((task) => {
+    if (task.id == id) {
+      task.title = task_modal.value;
+      modal.classList.remove("block");
+      modal.classList.add("hidden");
+    }
+  });
+  mainList.innerHTML = null;
+  renderTasklist(task);
+  countTaskDone(task);
+});
+// !--------------- delete task  finished---------------
+// !--------------- update task  started----------------
+
+// !--------------- update task  finished---------------

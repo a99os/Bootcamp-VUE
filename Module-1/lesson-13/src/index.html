@@ -72,6 +72,28 @@
       </section>
       <!-- finished main section -->
     </main>
+    <div class="modal w-full hidden bg-slate-400 absolute top-0 h-full bx-filter-alt opacity-70">
+      <div class="modal w-1/2 mx-auto absolute top-2 left-1/4">
+        <form action="" id="editForm"
+          <div class="flex gap-1 items-center">
+            <label for="task" class="w-full">
+              <input
+                id=""
+                type="text"
+                placeholder="Enter new task title"
+                class="task_modal p-3 w-full border border-spacing-1 border-blue-400 shadow focus:ring-4 focus:outline-none focus:ring-cyan-500 rounded-sm"
+              />
+            </label>
+            <button
+              type="submit"
+              class="py-4 px-10 bg-green-600 text-white focus:ring-4 focus:ring-cyan-200 rounded-sm active:bg-cyan-700"
+            >
+              Save
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
   </body>
   <script src="./utils/utils.js"></script>
   <script src="./script/script.js"></script>
