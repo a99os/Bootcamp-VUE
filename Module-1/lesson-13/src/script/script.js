@@ -12,32 +12,31 @@ const editTask = document.querySelectorAll(".edit");
 const checkTask = document.querySelectorAll(".check");
 
 // !--------------- task list---------------
-let tasklist = [
-  {
-    id: Date.now(),
-    title: "lorem ipsum dolor sit amet",
-    status: true,
-  },
-  {
-    id: Date.now(),
-    title: "lorem dolor fact ",
-    status: false,
-  },
-  {
-    id: Date.now(),
-    title: "goal dolor sit amet",
-    status: true,
-  },
+let task = [
+  // {
+  //   id: Date.now(),
+  //   title: "lorem ipsum dolor sit amet",
+  //   status: true,
+  // },
+  // {
+  //   id: Date.now(),
+  //   title: "lorem dolor fact ",
+  //   status: false,
+  // },
+  // {
+  //   id: Date.now(),
+  //   title: "goal dolor sit amet",
+  //   status: true,
+  // },
 ];
 
 // !--------------- dymamic task list---------------
-function renderTasklist(tasklist) {
-  if (tasklist.length) {
-    tasklist.forEach((task, id) => {
-      console.log(task);
+function renderTasklist(task) {
+  if (task.length) {
+    task.forEach((task, id) => {
       const taskItem = createElement(
         "li",
-        "w-full p-3 flex justify-between bg-white shadow-lg rounded-md mb-3 border-spacing-1",
+        "list__item w-full p-3 flex justify-between bg-white shadow-lg rounded-md mb-3 border-spacing-1",
         `
         <p class="text-xl text-[#5a5a5a] ">
           ${task.title}
@@ -59,7 +58,7 @@ function renderTasklist(tasklist) {
           }" class="check bx bx-check-circle text-2xl  mx-2 cursor-pointer  ${
           task.status
             ? " text-green-600  active:text-green-800"
-            : "text-black  active:text-[#3a3a3a]"
+            : "text-orange-500  active:text-orange-800"
         }"
           ></i>
         </div>`
@@ -72,17 +71,54 @@ function renderTasklist(tasklist) {
   }
 }
 
-renderTasklist(tasklist);
+renderTasklist(task);
 
 // !--------------- dymamic task list finished---------------
 // !--------------- count task done started---------------
-function countTaskDone(taskList) {
-  const done = taskList.filter((task) => task.status).length;
-  const progres = taskList.filter((task) => !task.status).length;
-  console.log(done);
-  console.log(progres);
+function countTaskDone(task) {
+  const done = task.filter((task) => task.status).length;
+  const progres = task.filter((task) => !task.status).length;
+
   doneTask.textContent = done;
   progresTask.textContent = progres;
 }
-countTaskDone(tasklist);
+countTaskDone(task);
 // !--------------- count task done finished---------------
+// !--------------- add new task  started---------------
+function addNewTask() {
+  const title = taskTitle.value;
+  const newTask = {
+    id: Date.now(),
+    title: title,
+    status: false,
+  };
+  const check = {
+    title: newTask.title.trim().length === 0,
+  };
+  if (check.title) {
+    alert("Plese enter a title for task");
+    // toast warning message
+  } else {
+    task.push(newTask);
+    taskTitle.value = "";
+  }
+  // toast success message
+}
+
+submitForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  addNewTask();
+  mainList.innerHTML = null;
+  renderTasklist(task);
+  countTaskDone(task);
+});
+// !--------------- add new task  finished---------------
+mainList.addEventListener("click", (e) => {
+  if (e.target.classList.contains("del")) {
+    const id = e.target.getAttribute("data-del");
+    task = task.filter((task) => task.id != id);
+    mainList.innerHTML = null;
+    renderTasklist(task);
+    countTaskDone(task);
+  }
+});
