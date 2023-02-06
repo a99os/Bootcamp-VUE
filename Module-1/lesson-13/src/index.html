@@ -16,9 +16,9 @@
     />
     <!-- fonts -->
   </head>
-  <body class="bg-[#f5f5f5]">
+  <body class="bg-[#f5f5f5] overflow-x-hidden">
     <div
-      class="toast bg-green-600 p-4 max-w-[200px] text-white font-medium rounded-lg absolute right-2 top-5"
+      class="toast bg-green-600 p-4 max-w-[200px] text-white font-medium rounded-lg absolute right-2 top-5 translate-x-72"
     >
       <p id="notif">Successfully added !</p>
     </div>
@@ -32,7 +32,7 @@
             >
               My to do list
             </h1>
-            <form action="">
+            <form action="" id="submitForm">
               <div class="flex gap-1 items-center">
                 <label for="task" class="w-full">
                   <input
@@ -73,16 +73,13 @@
                 </p>
                 <div class="btn-group flex justify-between">
                   <i
-                    id="del"
-                    class="bx bx-trash text-2xl text-red-600 mx-2 cursor-pointer active:text-red-800"
+                    class="del bx bx-trash text-2xl text-red-600 mx-2 cursor-pointer active:text-red-800"
                   ></i>
                   <i
-                    id="edit"
-                    class="bx bx-edit text-2xl text-sky-600 mx-2 cursor-pointer active:text-sky-800"
+                    class="edit bx bx-edit text-2xl text-sky-600 mx-2 cursor-pointer active:text-sky-800"
                   ></i>
                   <i
-                    id="check"
-                    class="bx bx-check-circle text-2xl text-green-600 mx-2 cursor-pointer active:text-green-800"
+                    class="check bx bx-check-circle text-2xl text-green-600 mx-2 cursor-pointer active:text-green-800"
                   ></i>
                 </div>
               </li>
