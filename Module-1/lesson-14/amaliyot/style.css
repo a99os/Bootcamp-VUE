@@ -1,0 +1,13 @@
+nav a {
+  text-decoration: none;
+  color: black;
+  font-size: 30px;
+}
+
+#cart img {
+  object-fit: cover;
+}
+
+.description {
+  height: 110px;
+}
