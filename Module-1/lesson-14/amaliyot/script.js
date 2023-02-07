@@ -373,8 +373,16 @@ function addcart(saleCards) {
 canvas.addEventListener("click", (e) => {
   id = e.target.id;
   console.log(e.target);
-  saleCards = saleCards.filter((card) => card.id != id);
-  console.log(saleCards);
+  let newCards = [];
+  let check = true;
+  saleCards.forEach((card) => {
+    if (check && card.id == id) {
+      check = false;
+    } else {
+      newCards.push(card);
+    }
+  });
+  saleCards = newCards;
   cartNumberIncrement(saleCards);
   addcart(saleCards);
 });
