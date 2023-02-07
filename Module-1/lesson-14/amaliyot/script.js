@@ -278,9 +278,13 @@ let products = [
 
 const productsDiv = document.querySelector(".products");
 const cartNumber = document.querySelector("#cart-number");
+const canvas = document.querySelector(".offcanvas-body");
+const totalprice = document.querySelector("#totalprice");
+const search = document.querySelector("#search");
 // ! -------- render cards
 
 function renderCard(cards) {
+  productsDiv.innerHTML = "";
   cards.forEach((card) => {
     const element = createElement(
       "div",
@@ -316,43 +320,107 @@ function cartNumberIncrement(saleCards) {
   cartNumber.textContent = String(saleCards.length);
 }
 
-const saleCards = [];
-cartNumberIncrement(saleCards);
+let saleCards = [];
 
-const btn__add = document.querySelector(".btn__add");
 productsDiv.addEventListener("click", (e) => {
   products.forEach((card) => {
     if (card.id == e.target.id) {
       saleCards.push(card);
     }
   });
-  console.log(saleCards);
   cartNumberIncrement(saleCards);
+  addcart(saleCards);
 });
 
-// return `
-//     <div class="card mb-3">
-//       <div class="row">
-//         <div class="col-md-4">
-//           <img
-//             src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZHVjdHxlbnwwfHwwfHw%3D&w=1000&q=80"
-//             class="img-fluid rounded-start h-100"
-//             alt="..."
-//           />
-//         </div>
-//         <div class="col-md-8">
-//           <div class="card-body">
-//             <h5 class="card-title">${name}</h5>
-//             <div
-//               class="d-flex justify-content-between align-items-center"
-//             >
-//               <p class="card-text">${price}$</p>
-//               <button class="btn btn-danger" id=${id}>
-//                 <i class="bi bi-trash"></i>
-//               </button>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   `;
+function addcart(saleCards) {
+  let summ = 0;
+  canvas.innerHTML = "";
+  saleCards.forEach((card) => {
+    summ = summ + Number(card.price);
+    const element = createElement(
+      "div",
+      "",
+      `<div class="card mb-3">
+      <div class="row">
+        <div class="col-md-4">
+          <img
+            src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZHVjdHxlbnwwfHwwfHw%3D&w=1000&q=80"
+            class="img-fluid rounded-start h-100"
+            alt="..."
+          />
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">${card.name}</h5>
+            <div
+              class="d-flex justify-content-between align-items-center"
+            >
+              <p class="card-text">${card.price}$</p>
+             
+                <i id=${card.id} class="btn btn-danger bi bi-trash"></i>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>`
+    );
+    canvas.append(element);
+  });
+  totalprice.textContent = `(${summ} $)`;
+}
+
+canvas.addEventListener("click", (e) => {
+  id = e.target.id;
+  console.log(e.target);
+  saleCards = saleCards.filter((card) => card.id != id);
+  console.log(saleCards);
+  cartNumberIncrement(saleCards);
+  addcart(saleCards);
+});
+
+search.addEventListener("input", (e) => {
+  console.log(e.target.value);
+  if (e.target.value) {
+    productsDiv.innerHTML = "";
+    let check = true;
+    products.forEach((card) => {
+      if (
+        card.name.slice(0, e.target.value.length).toLocaleLowerCase() ==
+        e.target.value.toLocaleLowerCase()
+      ) {
+        check = false;
+        let element = createElement(
+          "div",
+          "col-4 mb-5  ",
+          `<div class="card" style="width: 18rem ">
+                <img
+             src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cHJvZHVjdHxlbnwwfHwwfHw%3D&w=1000&q=80"
+                  class="card-img-top"
+                  alt="..."
+                />
+                <div class="card-body">
+                  <h5 class="card-title">${card.name}</h5>
+                  <p class="card-text description">${card.description.slice(
+                    0,
+                    150
+                  )}
+                  </p>
+                  <p class="card-text">${card.price}
+                  </p>
+                  <button class="btn btn__add btn-primary" id="${
+                    card.id
+                  }">add</button>
+                </div>
+              </div>`
+        );
+        productsDiv.append(element);
+      }
+    });
+    if (check) {
+      productsDiv.append("Not found product");
+    }
+  } else {
+    renderCard(products);
+  }
+});
