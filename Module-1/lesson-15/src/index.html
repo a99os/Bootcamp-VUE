@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>login</title>
+    <!-- main css -->
+    <!-- <link rel="stylesheet" href="./styles/style.css" /> -->
+    <!-- boc icon -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- fonts -->
+  </head>
+  <body>
+    <div
+      class="w-screen h-screen bg-[url('./images/Login.jpg')] bg-no-repeat bg-cover flex items-center justify-center"
+    >
+      <main>
+        <div class="container mx-auto">
+          <form
+            action=""
+            class="mx-auto flex flex-col justify-between items-center w-[300px] min-h-[323px]"
+          >
+            <img src="./images/logo.svg" alt="logo" />
+            <div
+              class="username__input border border-spacing-2 border-white rounded-sm w-[300px] h-[45px] flex items-center mt-[51px] hover:border-[#0D75FF] active:ring-2 active:ring-[#0D75FF]"
+            >
+              <i class="bx bx-user text-2xl text-white p-4"></i>
+              <input
+                type="text"
+                placeholder="USERNAME"
+                class="outline-none bg-transparent text-white placeholder-slate-100 p-2"
+              />
+            </div>
+            <div
+              class="password__input border border-spacing-2 border-white rounded-sm w-[300px] h-[45px] flex items-center mt-5 hover:border-[#0D75FF] active:ring-2 active:ring-[#0D75FF]"
+            >
+              <i class="bx bx-lock-alt text-2xl text-white p-4"></i>
+              <input
+                type="password"
+                placeholder="PASSWORD"
+                class="outline-none bg-transparent text-white placeholder-slate-100 p-2"
+              />
+            </div>
+
+            <button
+              type="submit"
+              class="rounded-sm w-[300px] h-[45px] bg-white text-[#0D75FF] mt-[43px] font-semibold py-3 hover:bg-[#0D75FF] hover:text-white duration-300 active:ring-2 active:ring-white"
+            >
+              LOGIN
+            </button>
+            <div class="text-end w-full mt-[11px]">
+              <a
+                href="#"
+                class="text-white font-medium text-end hover:text-[#0D75FF] duration-300"
+                >Forgot password?</a
+              >
+            </div>
+            <div class="text-end w-full">
+              <a
+                href="#"
+                class="text-white font-medium text-end hover:text-[#0D75FF] duration-300"
+                >SIGN UP</a
+              >
+            </div>
+          </form>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
