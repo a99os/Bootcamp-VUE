@@ -2,7 +2,9 @@
 let exit = document.querySelector("#exit");
 let usernameId = document.querySelector("#username");
 let mainList = document.querySelector(".list");
+let task = document.querySelector("#task");
 let token = localStorage.getItem("token");
+let submitForm = document.querySelector("#submitForm");
 
 // !----logout
 exit.addEventListener("click", () => {
@@ -29,8 +31,8 @@ function logout() {
 
 const listTasks = async () => {
   try {
-    const response = await fetch("http://178.62.198.221:3003/task", {
-      method: "POST",
+    const response = await fetch("http://localhost:3003/task", {
+      method: "GET",
       headers: {
         "Content-Type": "application/json",
         authorization: "Bearer " + token,
@@ -42,7 +44,6 @@ const listTasks = async () => {
     console.log(error);
   }
 };
-console.log(listTasks());
 
 // !Render list
 function renderTasklist(task) {
@@ -83,4 +84,31 @@ function renderTasklist(task) {
   } else {
     mainList.innerHTML = "<h2 class='text-center'> Not Found !</h2>";
   }
+}
+
+submitForm.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  console.log(e);
+  const title = task.value.trim();
+  if (title.length) {
+    const response = await fetch("http://localhost:3003/task", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        authorization: "Bearer " + token,
+      },
+      body: {
+        title,
+      },
+    });
+    console.log(response);
+  } else {
+    alert("taskni kirgaz");
+  }
+});
+
+async function actionTask() {
+  list.innerHTML = "";
+  const tasks = await listTasks();
+  renderTasklist(tasks);
 }

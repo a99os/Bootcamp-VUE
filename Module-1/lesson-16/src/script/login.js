@@ -16,7 +16,7 @@ function submitSignUp(e) {
     console.log("please enter your username and password");
   } else {
     console.log("salom");
-    fetch("http://178.62.198.221:3003/user/login", {
+    fetch("http://localhost:3003/user/login", {
       headers: {
         "Content-Type": "application/json",
       },
@@ -28,7 +28,7 @@ function submitSignUp(e) {
       })
       .then((result) => {
         console.log(result);
-        localStorage.setItem("token", result.tokens.access_token);
+        localStorage.setItem("token", result.token);
         localStorage.setItem("user", result.user.username);
         localStorage.setItem("id", result.user.id);
         let token = localStorage.getItem("token");

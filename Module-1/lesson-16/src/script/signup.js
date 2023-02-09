@@ -16,7 +16,7 @@ function submitSignUp(e) {
     console.log("please enter your username and password");
   } else {
     console.log("salom");
-    fetch("http://178.62.198.221:3003/user/register", {
+    fetch("http://localhost:3003/user/register", {
       headers: {
         "Content-Type": "application/json",
       },
