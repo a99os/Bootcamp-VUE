@@ -31,18 +31,18 @@
             Shaxsiy kabinetga kirish
           </h2>
         </div>
-        <form class="mt-8 space-y-6" action="#" method="POST">
+        <form class="mt-8 space-y-6" id="signin">
           <input type="hidden" name="remember" value="true" />
           <div class="-space-y-px rounded-md shadow-sm">
             <div>
-              <label for="username-address" class="sr-only"
+              <label for="email-address" class="sr-only"
                 >Foydalanuvchi nomi</label
               >
               <input
-                id="username-address"
-                name="username"
+                id="email-address"
+                name="email"
                 type="text"
-                autocomplete="username"
+                autocomplete="email"
                 required
                 class="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
                 placeholder="Foydalanuvchi nomini kiriting"
@@ -102,4 +102,5 @@
       </div>
     </div>
   </body>
+  <script src="./script/login.js"></script>
 </html>

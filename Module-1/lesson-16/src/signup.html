@@ -31,7 +31,7 @@
             Yangi hisob ochish
           </h2>
         </div>
-        <form class="mt-8 space-y-6" action="#" method="POST">
+        <form class="mt-8 space-y-6" id="signup">
           <input type="hidden" name="remember" value="true" />
           <div class="-space-y-px rounded-md shadow-sm">
             <div>
@@ -39,10 +39,10 @@
                 >Foydalanuvchi nomi</label
               >
               <input
-                id="username-address"
-                name="username"
-                type="username"
-                autocomplete="username"
+                id="email-address"
+                name="email"
+                type="text"
+                autocomplete="email"
                 required
                 class="relative block w-full appearance-none rounded-none rounded-t-md border border-gray-300 px-3 py-2 text-gray-900 placeholder-gray-500 focus:z-10 focus:border-cyan-500 focus:outline-none focus:ring-cyan-500 sm:text-sm"
                 placeholder="Foydalanuvchi nomini kiriting"
@@ -102,4 +102,5 @@
       </div>
     </div>
   </body>
+  <script src="./script/signup.js"></script>
 </html>
