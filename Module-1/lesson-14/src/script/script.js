@@ -1,4 +1,13 @@
 "use strict";
+if (
+  localStorage.them === "dark" ||
+  (!("them" in localStorage) &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches)
+) {
+  document.documentElement.classList.add("dark");
+} else {
+  document.documentElement.classList.remove("dark");
+}
 
 let them = document.querySelector("#them");
 let header = document.querySelector("header");
@@ -6,29 +15,21 @@ let search = document.querySelector("#search");
 let regionSelect = document.querySelector("#region");
 let cardTemplate = document.querySelector(".card");
 let cardWrapper = document.querySelector(".card__wrapper");
-them.addEventListener("input", (e) => {
-  localStorage.setItem("them", e.target.checked);
-  changemode();
-});
-
-function changemode() {
-  let mode = localStorage.getItem("them");
-  if (String(mode) == "true") {
-    header.style.cssText = "background-color: #2b3844; color: #fff";
-    search.style.cssText = "background-color: #2b3844";
-    region.style.cssText = "background-color: #2b3844";
-    // cardTemplate.style.cssText = "background-color: #2b3844";
-    document.body.style.cssText = "background-color: #202c36; color: #fff";
+them.addEventListener("click", (e) => {
+  localStorage.setItem(
+    "them",
+    localStorage.getItem("them") === "light" ? "dark" : "light"
+  );
+  if (
+    localStorage.them === "dark" ||
+    (!("them" in localStorage) &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches)
+  ) {
+    document.documentElement.classList.add("dark");
   } else {
-    header.style.cssText = "background-color: #fff; color: #000";
-    search.style.cssText = "background-color: #fff";
-    region.style.cssText = "background-color: #fff";
-    // cardTemplate.style.cssText = "background-color: #fff";
-    document.body.style.cssText = "background-color: #f2f2f2; color: #000";
+    document.documentElement.classList.remove("dark");
   }
-}
-
-changemode();
+});
 
 // ! ------------dinamic cards --------------------
 let baseURL = "https://restcountries.com/v2/all";
@@ -60,7 +61,7 @@ function renderCards(cards) {
   cards.forEach((element) => {
     const card = createElement(
       "div",
-      "card rounded-[5px] shadow-lg w-[240px] bg-white max-w-sm shadow-lg",
+      "card rounded-[5px] shadow-lg w-[240px] bg-white dark:bg-[#2b3844] dark:text-white max-w-sm shadow-lg",
       `
         <a href="#!">
           <img
@@ -70,7 +71,7 @@ function renderCards(cards) {
           />
         </a>
         <div class="p-6">
-          <h5 class="text-xl font-medium mb-2 card__title cursor-pointer" data-isname =${
+          <h5 class="text-xl font-medium mb-2 card__title cursor-pointer " data-isname =${
             element.name
           }>${element.name}</h5>
           <li class="list-none">
