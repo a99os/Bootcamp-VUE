@@ -35,3 +35,7 @@
 .btn-slider__active {
   background: linear-gradient(270deg, #4d5ef6 0%, #f64d4d 100%);
 }
+
+.list__item:hover {
+  background: linear-gradient(270deg, #4d5ef6 0%, #f64d4d 100%);
+}

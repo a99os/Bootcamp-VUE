@@ -25,7 +25,7 @@
   <body>
     <div id="root">
       <!-- header started -->
-      <header class="shadow-md">
+      <header class="shadow-md shadow-[#00000038]">
         <div class="container max-w-[1230px] mx-auto">
           <div class="flex justify-end mb-[6px] h-[30px] items-center">
             <div>
@@ -98,12 +98,12 @@
       </header>
       <!-- header finished -->
       <!-- main started -->
-      <div class="main">
+      <div class="main bg-[#ECF4FF] mt-1">
         <!-- slider section started -->
         <section class="slider">
           <div class="container max-w-[1230px] mx-auto">
             <div class="slider__wrapper pt-10 relative">
-              <img src="./images/Frame 2 (1).png" alt="" />
+              <img src="./images/Frame 2 (1).png" alt="slider img" />
               <div
                 class="btn-katalog cursor-pointer left-arrow absolute w-[42px] h-[42px] rounded-full flex items-center justify-center -left-[62px] top-1/2"
               >
@@ -116,17 +116,55 @@
               </div>
               <div class="mt-[20px] w-[150px] mx-auto flex justify-between">
                 <div
-                  class="btn-slider btn-slider__active h-4 w-4 rounded-full"
+                  class="btn-slider btn-slider__active h-4 w-4 rounded-full duration-300"
                 ></div>
-                <div class="btn-slider h-4 w-4 rounded-full"></div>
-                <div class="btn-slider h-4 w-4 rounded-full"></div>
-                <div class="btn-slider h-4 w-4 rounded-full"></div>
-                <div class="btn-slider h-4 w-4 rounded-full"></div>
+                <div class="btn-slider h-4 w-4 rounded-full duration-300"></div>
+                <div class="btn-slider h-4 w-4 rounded-full duration-300"></div>
+                <div class="btn-slider h-4 w-4 rounded-full duration-300"></div>
+                <div class="btn-slider h-4 w-4 rounded-full duration-300"></div>
               </div>
             </div>
           </div>
         </section>
         <!-- slider section finished -->
+        <!-- categories section started -->
+        <section class="categories">
+          <div class="container mx-auto max-w-[1230px]">
+            <h1
+              class="capitalize font-normal text-[28px] leading-[34px] text-[#1E1E1E]"
+            >
+              Kategoriyalar
+            </h1>
+            <ul class="categories__list py-5 flex justify-between items-center">
+              <li
+                v-for="item in categories"
+                class="list__item group rounded-[10px] hover:shadow-lg duration-300 hover:shadow-[#4d5ef6] h-[200px] pt-[9px] bg-white w-[136px]"
+              >
+                <a href="#">
+                  <img
+                    :src="item.img"
+                    :alt="item.name"
+                    class="mt-[9px]"
+                    alt="apple"
+                  />
+                  <p
+                    class="font-normal group-hover:text-white text-[14px] leading-[17px] text-[#1E1E1E] text-center mx-auto"
+                  >
+                    {{item.name}}
+                  </p>
+                </a>
+              </li>
+            </ul>
+            <div
+              class="list__item h-[50px] duration-300 rounded-[10px] flex items-center hover:shadow-[#4d5ef6] hover:text-white text-[#1E1E1E] justify-center bg-white font-normal text-[18px] leading-[22px]"
+            >
+              <a href="#">Batafsil</a>
+            </div>
+          </div>
+        </section>
+        <!-- categories section finished -->
+        <!-- salers section started -->
+        <!-- salers section finished -->
       </div>
       <!-- main finished -->
     </div>
