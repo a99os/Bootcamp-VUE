@@ -105,12 +105,12 @@
             <div class="slider__wrapper pt-10 relative">
               <img src="./images/Frame 2 (1).png" alt="slider img" />
               <div
-                class="btn-katalog cursor-pointer left-arrow absolute w-[42px] h-[42px] rounded-full flex items-center justify-center -left-[62px] top-1/2"
+                class="btn-slider cursor-pointer left-arrow absolute w-[42px] h-[42px] rounded-full flex items-center justify-center -left-[62px] top-1/2"
               >
                 <i class="bx bx-chevron-left text-2xl"></i>
               </div>
               <div
-                class="btn-katalog cursor-pointer right-arrow absolute w-[42px] h-[42px] rounded-full flex items-center justify-center -right-[62px] top-1/2"
+                class="btn-slider cursor-pointer right-arrow absolute w-[42px] h-[42px] rounded-full flex items-center justify-center -right-[62px] top-1/2"
               >
                 <i class="bx bx-chevron-right text-2xl"></i>
               </div>
@@ -263,12 +263,12 @@
             <div class="slider__wrapper mt-[60px] relative">
               <img src="./images/image 1.png" alt="slider 2" />
               <div
-                class="btn-katalog cursor-pointer left-arrow absolute w-[42px] h-[42px] rounded-full flex items-center justify-center -left-[62px] top-[40%]"
+                class="btn-slider cursor-pointer left-arrow absolute w-[42px] h-[42px] rounded-full flex items-center justify-center -left-[62px] top-[40%]"
               >
                 <i class="bx bx-chevron-left text-2xl"></i>
               </div>
               <div
-                class="btn-katalog cursor-pointer right-arrow absolute w-[42px] h-[42px] rounded-full flex items-center justify-center -right-[62px] top-[40%]"
+                class="btn-slider cursor-pointer right-arrow absolute w-[42px] h-[42px] rounded-full flex items-center justify-center -right-[62px] top-[40%]"
               >
                 <i class="bx bx-chevron-right text-2xl"></i>
               </div>
@@ -379,8 +379,215 @@
         </section>
         <!--brend section finished -->
         <!-- -------------------------------------------------------------------------------- -->
+        <!-- slider section started -->
+        <section class="slider">
+          <div class="container mx-auto w-[1230px]">
+            <div class="slider__wrapper mt-[60px] relative">
+              <img src="./images/image 1.png" alt="slider 2" />
+              <div
+                class="btn-slider cursor-pointer left-arrow absolute w-[42px] h-[42px] rounded-full flex items-center justify-center -left-[62px] top-[40%]"
+              >
+                <i class="bx bx-chevron-left text-2xl"></i>
+              </div>
+              <div
+                class="btn-slider cursor-pointer right-arrow absolute w-[42px] h-[42px] rounded-full flex items-center justify-center -right-[62px] top-[40%]"
+              >
+                <i class="bx bx-chevron-right text-2xl"></i>
+              </div>
+              <div class="mt-[20px] w-[88px] mx-auto flex justify-between">
+                <div
+                  class="btn-slider btn-slider__active h-4 w-4 rounded-full duration-300"
+                ></div>
+                <div class="btn-slider h-4 w-4 rounded-full duration-300"></div>
+                <div class="btn-slider h-4 w-4 rounded-full duration-300"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- slider section finished -->
+        <!-- -------------------------------------------------------------------------------- -->
+        <!-- brend section started -->
+        <section class="shop">
+          <div class="container mx-auto w-[1230px]">
+            <div class="shop__wrapper mt-[60px] pb-20">
+              <h1
+                class="capitalize font-normal text-[28px] leading-[34px] text-[#1E1E1E]"
+              >
+                Do’konlarimiz
+              </h1>
+              <ul class="flex gap-5 mt-5 flex-wrap">
+                <li
+                  v-for="item in shops"
+                  class="py-[5px] px-[49px] rounded-lg bg-white hover:shadow-lg hover:shadow-[#4d5ef6] cursor-pointer"
+                >
+                  <img :src="item.img" class="w-[90px] h-[90px]" alt="" />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <!--shop section finished -->
       </div>
       <!-- main finished -->
+      <!-- -------------------------------------------------------------------------------- -->
+      <!-- footer started -->
+      <footer class="footer bg-">
+        <div class="container mx-auto w-[1230px]">
+          <div class="footer__wrapper py-[60px] flex">
+            <div class="hujjatlar flex flex-col gap-5">
+              <h1 class="text-4 leading-[19px] font-bold text-[#1E1E1E]">
+                Hujjatlar
+              </h1>
+              <a
+                href="#"
+                class="text-4 leading-[19px] font-normal hover:text-[#0D63F3] text-[#1E1E1E]"
+                >Umumiy shartlar</a
+              >
+              <a
+                href="#"
+                class="text-4 leading-[19px] font-normal hover:text-[#0D63F3] text-[#1E1E1E]"
+                >Ofertalar arxivi</a
+              >
+              <a
+                href="#"
+                class="text-4 leading-[19px] font-normal hover:text-[#0D63F3] text-[#1E1E1E]"
+                >Nizom</a
+              >
+              <a
+                href="#"
+                class="text-4 leading-[19px] font-normal hover:text-[#0D63F3] text-[#1E1E1E]"
+                >Guvohnoma</a
+              >
+            </div>
+            <div class="service flex flex-col gap-5 ml-[74px]">
+              <h1 class="text-4 leading-[19px] font-bold text-[#1E1E1E]">
+                Servis
+              </h1>
+              <a
+                href="#"
+                class="text-4 leading-[19px] font-normal hover:text-[#0D63F3] text-[#1E1E1E]"
+                >Dokonlar</a
+              >
+              <a
+                href="#"
+                class="text-4 leading-[19px] font-normal hover:text-[#0D63F3] text-[#1E1E1E]"
+                >Biz haqimizda</a
+              >
+              <a
+                href="#"
+                class="text-4 leading-[19px] font-normal hover:text-[#0D63F3] text-[#1E1E1E]"
+                >Hamkorlik uchun</a
+              >
+              <a
+                href="#"
+                class="text-4 leading-[19px] font-normal hover:text-[#0D63F3] text-[#1E1E1E]"
+                >Qaytarish</a
+              >
+              <a
+                href="#"
+                class="text-4 leading-[19px] font-normal hover:text-[#0D63F3] text-[#1E1E1E]"
+                >Promokodlar</a
+              >
+            </div>
+
+            <div class="catalog flex flex-col gap-5 ml-[74px]">
+              <h1 class="text-4 leading-[19px] font-bold text-[#1E1E1E]">
+                Mahsulotlar katalogi
+              </h1>
+              <a
+                href="#"
+                class="text-4 leading-[19px] font-normal hover:text-[#0D63F3] text-[#1E1E1E]"
+                >Katalog 1</a
+              >
+              <a
+                href="#"
+                class="text-4 leading-[19px] font-normal hover:text-[#0D63F3] text-[#1E1E1E]"
+                >Katalog 1</a
+              >
+              <a
+                href="#"
+                class="text-4 leading-[19px] font-normal hover:text-[#0D63F3] text-[#1E1E1E]"
+              >
+                Katalog 2</a
+              >
+              <a
+                href="#"
+                class="text-4 leading-[19px] font-normal hover:text-[#0D63F3] text-[#1E1E1E]"
+                >Katalog 2</a
+              >
+              <a
+                href="#"
+                class="text-4 leading-[19px] font-normal hover:text-[#0D63F3] text-[#1E1E1E]"
+                >Katalog 3</a
+              >
+              <a
+                href="#"
+                class="text-4 leading-[19px] font-normal hover:text-[#0D63F3] text-[#1E1E1E]"
+                >Katalog 3</a
+              >
+            </div>
+            <div class="catalog flex flex-col gap-5 ml-[250px]">
+              <h1 class="text-4 leading-[19px] font-bold text-[#1E1E1E]">
+                Axbarot xizmati
+              </h1>
+              <p class="text-4 leading-[19px] font-normal text-[#1E1E1E]">
+                contact.@nextstore.uz
+              </p>
+              <p
+                class="text-4 leading-[19px] font-normal w-[147px] text-[#1E1E1E]"
+              >
+                +998 97 712 96 96 +998 95 503 09 09
+              </p>
+              <p
+                class="text-4 leading-[19px] font-normal w-[355px] text-[#1E1E1E]"
+              >
+                Sag’bon 186, Olmazor tumani, Toshkent, O'zbekiston
+              </p>
+              <div class="logos flex w-[246px] justify-between items-center">
+                <a href="#">
+                  <img
+                    src="./images/Facebook - Original.svg"
+                    alt="facebook"
+                    class="w-[42px] h-[42px] duration-300 hover:scale-105"
+                  />
+                </a>
+                <a href="#">
+                  <img
+                    src="./images/Instagram - Original.svg"
+                    alt="facebook"
+                    class="w-[42px] h-[42px] duration-300 hover:scale-105"
+                  />
+                </a>
+                <a href="#">
+                  <img
+                    src="./images/Telegram - Original.svg"
+                    alt="facebook"
+                    class="w-[42px] h-[42px] duration-300 hover:scale-105"
+                  />
+                </a>
+                <a href="#">
+                  <img
+                    src="./images/TikTok - Original.svg"
+                    alt="facebook"
+                    class="w-[42px] h-[42px] duration-300 hover:scale-105"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="line__footer h-[2px] w-full"></div>
+          <div class="flex justify-between items-center py-[39px]">
+            <p class="text-4 leading-[19px] font-normal text-[#1E1E1E]">
+              2022 Nextstore.com
+            </p>
+            <p class="text-4 leading-[19px] font-normal text-[#1E1E1E]">
+              Powered by: Abbos Ashirboyev
+            </p>
+          </div>
+        </div>
+      </footer>
+      <!-- footer finished -->
     </div>
   </body>
   <script src="./app.js"></script>

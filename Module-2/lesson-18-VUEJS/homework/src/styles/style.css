@@ -19,6 +19,9 @@
 .icon:hover > i {
   color: #0d63f3;
 }
+.btn-slider:hover > i {
+  color: white;
+}
 
 .btn-slider {
   background: linear-gradient(
@@ -45,4 +48,16 @@
     rgba(77, 94, 246, 0.2) 0%,
     rgba(246, 77, 77, 0.2) 100%
   );
+}
+
+.footer {
+  background: linear-gradient(
+    270deg,
+    rgba(77, 94, 246, 0.2) 0%,
+    rgba(246, 77, 77, 0.2) 100%
+  );
+}
+
+.line__footer {
+  background: linear-gradient(270deg, #f64d4d 0%, #4d5ef6 100%);
 }
