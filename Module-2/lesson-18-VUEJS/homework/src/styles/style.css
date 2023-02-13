@@ -1,0 +1,22 @@
+.btn-katalog {
+  background: linear-gradient(270deg, #4d5ef6 0%, #f64d4d 100%);
+  border-radius: 8px;
+}
+.btn-katalog:hover {
+  background: linear-gradient(
+    270deg,
+    rgba(77, 94, 246, 0.2) 0%,
+    rgba(246, 77, 77, 0.2) 100%
+  );
+  border: 1px solid linear-gradient(270deg, #4d5ef6 0%, #f64d4d 100%);
+}
+.btn-katalog:hover > i {
+  color: #101828;
+}
+.btn-katalog:hover > p {
+  color: #101828;
+}
+
+.icon:hover > i {
+  color: #101828;
+}

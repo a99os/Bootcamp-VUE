@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- vue CDN -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="./output.css"></script>
+
+    <title>E commerce</title>
+    <!-- main css -->
+    <link rel="stylesheet" href="./styles/style.css" />
+    <!-- boc icon -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- fonts -->
+  </head>
+  <body>
+    <div id="root">
+      <header class="shadow-md">
+        <div class="container max-w-[1230px] mx-auto">
+          <div class="flex justify-end mb-[6px] h-[30px] items-center">
+            <div>
+              <i class="bx bxs-envelope"></i>
+              <a href="#" class="ml-[10px]">Aloqa uchun</a>
+            </div>
+            <div>
+              <p class="inline-block ml-[221px]">UZ</p>
+              <i class="bx bx-chevron-down ml-[9px]"></i>
+            </div>
+          </div>
+          <div class="flex h-[70px] items-center">
+            <a href="#" class="">
+              <img
+                src="./images/Logo.svg"
+                class="w-[91px] h-[35px]"
+                alt="logo"
+              />
+            </a>
+            <div
+              class="btn-katalog w-[149px] border hover:border-[#4d5ef6] h-[46px] cursor-pointer flex justify-center items-center ml-[171px]"
+            >
+              <i class="bx bx-menu text-xl text-white"></i>
+              <p
+                class="uppercase text-4 leading-[19px] ml-[15px] text-white font-normal"
+              >
+                Katalog
+              </p>
+            </div>
+            <div class="flex ml-[60px]">
+              <input
+                type="text"
+                placeholder="Maxsulotlarni izlash"
+                class="border rounded-l-lg pl-[18px] outline-[#0D63F3] hover:border hover:border-[#0D63F3] placeholder:text-4 placeholder:leading-[19px] placeholder:font-normal"
+              />
+              <div
+                class="icon w-[60px] h-[46px] bg-[#0D63F3] cursor-pointer border flex items-center justify-center rounded-r-lg hover:bg-[#ECF4FF] hover:border-[#0D63F3]"
+              >
+                <i class="bx bx-search-alt-2 text-white text-xl"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+  </body>
+  <script src="./app.js"></script>
+</html>

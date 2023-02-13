@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- vue CDN -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <!-- tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./output.css"></script>
+    <title>leeson-18</title>
+    <!-- main css -->
+    <link rel="stylesheet" href="./styles/style.css" />
+    <!-- boc icon -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- fonts -->
+  </head>
+  <body>
+    <div id="root">
+      <header class="bg-green-600 w-full">
+        <div class="container mx-auto px-5">
+          <nav class="nav flex justify-between h-[70px] items-center">
+            <a href="#" class="text-white text-2xl font-semibold">
+              VUE.JS BOOTCAMP</a
+            >
+            <i class="bx bx-menu text-3xl text-white" @click="setToggle"></i>
+          </nav>
+        </div>
+      </header>
+      <main class="min-h-screen duration-300 flex">
+        <aside class="bg-white w-1/6 shadow-2xl min-h-screen" v-if="toggle">
+          <ul class="list">
+            <li
+              v-for="item in navLinks"
+              :key="item.id"
+              class="list__item p-4 bg-green-100 m-1 text-slate-800 font-semibold rounded-lg uppercase duration-200 hover:bg-green-200"
+            >
+              <a href="" class="list__item--link">{{item.title}}</a>
+            </li>
+          </ul>
+        </aside>
+        <section class="main bg-lime-100 w-5/6 min-h-screen flex-grow">
+          <div class="container mx-auto">
+            <div
+              class="card mx-auto w-[1200px] h-[400px] shadow-2xl bg-white m-5 p-5"
+            >
+              <form action="#" @submit="addNewTask">
+                <label for="taskName " class="w-4/5">
+                  <p class="text-slate-800 ml-32 mb-4 font-bold">
+                    Enter task name
+                  </p>
+                  <input
+                    id="taskName"
+                    type="text"
+                    v-bind:value="taskName"
+                    @input="e=>taskName=e.target.value"
+                    class="p-4 border focus:ring-2 w-4/5 focus:ring-green-300 focus:outline-none block mx-auto"
+                  />
+                </label>
+                <label for="taskDeadline " class="w-4/5">
+                  <p class="text-slate-800 ml-32 my-4 font-bold">
+                    Enter task name
+                  </p>
+                  <input
+                    id="taskDeadline"
+                    @input="e=>taskDeadline=e.target.value"
+                    v-bind:value="taskDeadline"
+                    type="date"
+                    class="p-4 border focus:ring-2 w-4/5 focus:ring-green-300 focus:outline-none block mx-auto"
+                  />
+                </label>
+                <button
+                  type="submit"
+                  class="w-4/5 bg-green-600 p-5 mx-auto my-5 block text-lg text-white hover:bg-green-500 active:bg-green-200 active:text-green-500"
+                >
+                  ADD NEW TASK
+                </button>
+              </form>
+            </div>
+            <div
+              class="card mx-auto w-[1200px] min-h-[400px] shadow-2xl bg-white m-5 p-5"
+            >
+              <ul v-if="tasks.length">
+                <li class="p-5 bg-green-200 rounded-lg my-4" v-for="item in tasks">{{item.title}}</li>
+              </ul>
+              <ul class="list-task" v-else>
+                not found
+              </ul>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="bg-green-600 p-5">
+        <div class="container mx-auto">
+          <p class="text-center text-white font-bold">
+            {{new Date().getFullYear()}}
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
+  <!-- main script -->
+  <script src="./app.js"></script>
+</html>
