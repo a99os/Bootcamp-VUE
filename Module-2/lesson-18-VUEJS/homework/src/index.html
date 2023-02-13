@@ -46,7 +46,7 @@
               />
             </a>
             <div
-              class="w-[149px] h-[46px] btn-katalog duration-300 border ml-[117px] flex justify-center items-center hover:border-[#4d5ef6] cursor-pointer"
+              class="w-[149px] h-[46px] rounded-lg btn-katalog duration-300 border ml-[117px] flex justify-center items-center hover:border-[#4d5ef6] cursor-pointer"
             >
               <a href="#" class="flex justify-center items-center">
                 <i class="bx bx-menu text-xl text-white"></i>
@@ -85,7 +85,7 @@
               ></i>
             </div>
             <div
-              class="w-[105px] h-[46px] btn-katalog duration-300 border ml-[59px] flex justify-center items-center hover:border-[#4d5ef6] cursor-pointer"
+              class="w-[105px] rounded-lg h-[46px] btn-katalog duration-300 border ml-[59px] flex justify-center items-center hover:border-[#4d5ef6] cursor-pointer"
             >
               <a href="#" class="flex justify-center items-center">
                 <p class="text-4 leading-[19px] text-white font-normal">
@@ -102,8 +102,27 @@
         <!-- slider section started -->
         <section class="slider">
           <div class="container max-w-[1230px] mx-auto">
-            <div class="slider__wrapper pt-10">
+            <div class="slider__wrapper pt-10 relative">
               <img src="./images/Frame 2 (1).png" alt="" />
+              <div
+                class="btn-katalog cursor-pointer left-arrow absolute w-[42px] h-[42px] rounded-full flex items-center justify-center -left-[62px] top-1/2"
+              >
+                <i class="bx bx-chevron-left text-2xl"></i>
+              </div>
+              <div
+                class="btn-katalog cursor-pointer right-arrow absolute w-[42px] h-[42px] rounded-full flex items-center justify-center -right-[62px] top-1/2"
+              >
+                <i class="bx bx-chevron-right text-2xl"></i>
+              </div>
+              <div class="mt-[20px] w-[150px] mx-auto flex justify-between">
+                <div
+                  class="btn-slider btn-slider__active h-4 w-4 rounded-full"
+                ></div>
+                <div class="btn-slider h-4 w-4 rounded-full"></div>
+                <div class="btn-slider h-4 w-4 rounded-full"></div>
+                <div class="btn-slider h-4 w-4 rounded-full"></div>
+                <div class="btn-slider h-4 w-4 rounded-full"></div>
+              </div>
             </div>
           </div>
         </section>
