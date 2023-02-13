@@ -138,6 +138,7 @@
             </h1>
             <ul class="categories__list py-5 flex justify-between items-center">
               <li
+                :key="item.id"
                 v-for="item in categories"
                 class="list__item group rounded-[10px] hover:shadow-lg duration-300 hover:shadow-[#4d5ef6] h-[200px] pt-[9px] bg-white w-[136px]"
               >
@@ -180,6 +181,7 @@
                 class="categories__list py-5 flex justify-between items-center flex-wrap gap-5"
               >
                 <li
+                  :key="item.id"
                   v-for="item in salers"
                   class="group px-5 rounded-[10px] relative hover:shadow-lg duration-300 hover:shadow-[#4d5ef6] h-[390px] pt-[9px] bg-white w-[230px]"
                 >
@@ -254,6 +256,35 @@
           </div>
         </section>
         <!-- salers section finished -->
+        <!-- -------------------------------------------------------------------------------- -->
+        <!-- slider section started -->
+        <section class="slider">
+          <div class="container mx-auto w-[1230px]">
+            <div class="slider__wrapper mt-[60px] relative">
+              <img src="./images/image 1.png" alt="slider 2" />
+              <div
+              class="btn-katalog cursor-pointer left-arrow absolute w-[42px] h-[42px] rounded-full flex items-center justify-center -left-[62px] top-[40%]"
+            >
+              <i class="bx bx-chevron-left text-2xl"></i>
+            </div>
+            <div
+              class="btn-katalog cursor-pointer right-arrow absolute w-[42px] h-[42px] rounded-full flex items-center justify-center -right-[62px] top-[40%]"
+            >
+              <i class="bx bx-chevron-right text-2xl"></i>
+            </div>
+            <div class="mt-[20px] w-[88px] mx-auto flex justify-between">
+              <div
+                class="btn-slider btn-slider__active h-4 w-4 rounded-full duration-300"
+              ></div>
+              <div class="btn-slider h-4 w-4 rounded-full duration-300"></div>
+              <div class="btn-slider h-4 w-4 rounded-full duration-300"></div>
+             
+            </div>
+          </div>
+            </div>
+          </div>
+        </section>
+        <!-- slider section finished -->
         <!-- -------------------------------------------------------------------------------- -->
       </div>
       <!-- main finished -->
