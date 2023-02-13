@@ -10,13 +10,13 @@
   );
   border: 1px solid linear-gradient(270deg, #4d5ef6 0%, #f64d4d 100%);
 }
-.btn-katalog:hover > i {
+.btn-katalog:hover > a > i {
   color: #101828;
 }
-.btn-katalog:hover > p {
+.btn-katalog:hover > a > p {
   color: #101828;
 }
 
 .icon:hover > i {
-  color: #101828;
+  color: #0d63f3;
 }
