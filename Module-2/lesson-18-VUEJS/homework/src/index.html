@@ -291,7 +291,7 @@
               <h1
                 class="capitalize font-normal text-[28px] leading-[34px] text-[#1E1E1E]"
               >
-                Eng ko’p sotilgan
+                Eng ommabop
               </h1>
               <ul
                 class="categories__list py-5 flex justify-between items-center flex-wrap gap-5"
@@ -357,6 +357,27 @@
         </section>
         <!-- popular section finished -->
         <!-- -------------------------------------------------------------------------------- -->
+        <!-- brend section started -->
+        <section class="brend">
+          <div class="container mx-auto w-[1230px]">
+            <div class="brend__wrapper mt-[60px]">
+              <h1
+                class="capitalize font-normal text-[28px] leading-[34px] text-[#1E1E1E]"
+              >
+                Brendlar bo'yicha
+              </h1>
+              <ul class="flex gap-5 mt-5 flex-wrap">
+                <li
+                  v-for="item in brends"
+                  class="py-[5px] px-[49px] rounded-lg bg-white hover:shadow-lg hover:shadow-[#4d5ef6] cursor-pointer"
+                >
+                  <img :src="item.img" class="w-[90px] h-[90px]" alt="" />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <!--brend section finished -->
         <!-- -------------------------------------------------------------------------------- -->
       </div>
       <!-- main finished -->
