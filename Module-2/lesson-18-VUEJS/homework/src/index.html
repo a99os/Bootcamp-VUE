@@ -263,28 +263,100 @@
             <div class="slider__wrapper mt-[60px] relative">
               <img src="./images/image 1.png" alt="slider 2" />
               <div
-              class="btn-katalog cursor-pointer left-arrow absolute w-[42px] h-[42px] rounded-full flex items-center justify-center -left-[62px] top-[40%]"
-            >
-              <i class="bx bx-chevron-left text-2xl"></i>
-            </div>
-            <div
-              class="btn-katalog cursor-pointer right-arrow absolute w-[42px] h-[42px] rounded-full flex items-center justify-center -right-[62px] top-[40%]"
-            >
-              <i class="bx bx-chevron-right text-2xl"></i>
-            </div>
-            <div class="mt-[20px] w-[88px] mx-auto flex justify-between">
+                class="btn-katalog cursor-pointer left-arrow absolute w-[42px] h-[42px] rounded-full flex items-center justify-center -left-[62px] top-[40%]"
+              >
+                <i class="bx bx-chevron-left text-2xl"></i>
+              </div>
               <div
-                class="btn-slider btn-slider__active h-4 w-4 rounded-full duration-300"
-              ></div>
-              <div class="btn-slider h-4 w-4 rounded-full duration-300"></div>
-              <div class="btn-slider h-4 w-4 rounded-full duration-300"></div>
-             
-            </div>
-          </div>
+                class="btn-katalog cursor-pointer right-arrow absolute w-[42px] h-[42px] rounded-full flex items-center justify-center -right-[62px] top-[40%]"
+              >
+                <i class="bx bx-chevron-right text-2xl"></i>
+              </div>
+              <div class="mt-[20px] w-[88px] mx-auto flex justify-between">
+                <div
+                  class="btn-slider btn-slider__active h-4 w-4 rounded-full duration-300"
+                ></div>
+                <div class="btn-slider h-4 w-4 rounded-full duration-300"></div>
+                <div class="btn-slider h-4 w-4 rounded-full duration-300"></div>
+              </div>
             </div>
           </div>
         </section>
         <!-- slider section finished -->
+        <!-- -------------------------------------------------------------------------------- -->
+        <!-- popular section started -->
+        <section class="popular">
+          <div class="container mx-auto max-w-[1230px]">
+            <div class="popular__wrapper mt-10">
+              <h1
+                class="capitalize font-normal text-[28px] leading-[34px] text-[#1E1E1E]"
+              >
+                Eng ko’p sotilgan
+              </h1>
+              <ul
+                class="categories__list py-5 flex justify-between items-center flex-wrap gap-5"
+              >
+                <li
+                  :key="item.id"
+                  v-for="item in salers"
+                  class="group px-5 rounded-[10px] relative hover:shadow-lg duration-300 hover:shadow-[#4d5ef6] h-[390px] pt-[9px] bg-white w-[230px]"
+                >
+                  <img src="./images/image 15.png" alt="laptop" />
+                  <h1
+                    class="text-[#0D63F3] justify-center font-normal text-[18px] leading-[22px]"
+                  >
+                    {{item.price}}
+                  </h1>
+                  <p
+                    class="mt-[6px] w-40 text-[#1E1E1E] justify-center h-[51px] font-normal text-[14px] leading-[17px]"
+                  >
+                    {{item.info}}
+                  </p>
+                  <p
+                    class="w-40 mt-4 text-[#6C757D] justify-center font-normal text-[14px] leading-[17px]"
+                  >
+                    {{item.order}} ta buyurtma
+                  </p>
+                  <div class="flex justify-between items-center mt-[25px]">
+                    <div
+                      class="w-[130px] text-white h-[40px] duration-300 bg-[#0D63F3] hover:bg-[#ECF4FF] hover:text-[#0D63F3] hover:border hover:border-[#0D63F3] rounded-lg"
+                    >
+                      <a
+                        href="#"
+                        class="w-full h-full flex items-center justify-center"
+                      >
+                        Sotib olish
+                      </a>
+                    </div>
+                    <div class="flex w-10 h-10 justify-center items-center">
+                      <i
+                        class="bx bx-cart-alt text-3xl text-[#6C757D] cursor-pointer hover:text-[#0D63F3]"
+                      ></i>
+                    </div>
+                  </div>
+                  <div
+                    class="h-8 w-8 absolute top-[10px] right-[10px] flex justify-center items-center"
+                  >
+                    <i
+                      class="bx cursor-pointer bx-heart heart-icon text-2xl text-red-300 hover:text-red-500"
+                    ></i>
+                  </div>
+                </li>
+              </ul>
+              <div
+                class="list__item h-[50px] duration-300 mt-[17px] rounded-[10px] hover:shadow-[#4d5ef6] hover:text-white text-[#1E1E1E] justify-center bg-white font-normal text-[18px] leading-[22px]"
+              >
+                <a
+                  href="#"
+                  class="h-full w-full flex items-center justify-center"
+                  >Ko'proq ko'rish</a
+                >
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- popular section finished -->
+        <!-- -------------------------------------------------------------------------------- -->
         <!-- -------------------------------------------------------------------------------- -->
       </div>
       <!-- main finished -->
