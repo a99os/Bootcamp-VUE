@@ -1,16 +1,9 @@
 {
-
-    "user": [
-        {
-            "id": 1,
-            "name": "John Smith",
-            "email": "John@smith.com"
-        }, {
-            "id": 2,
-            "name": "John Doe",
-            "email": "John@doe.com"
-        }
-
-    ]
-
+  "user": [
+    {
+      "id": "d460cb4c-9068-455a-807d-296f3f5b4525",
+      "name": "Abbos Dev",
+      "email": "abbosashirboev@gmail.com"
+    }
+  ]
 }
