@@ -1,5 +1,6 @@
 <template>
   <div class="bg-white pt-5 w-1/2 mx-auto min-h-[300px] shadow">
+    <Modal :isOpen="isOpen" @hide="hideModal" />
     <h1 class="text-green-700 text-center text-2xl uppercase font-semibold">
       User list
     </h1>
@@ -29,6 +30,7 @@
           :num="index"
           :item="item"
           :removeUser="removeUser"
+          @openModal="isOpenTrue"
         />
       </tbody>
     </table>
@@ -36,6 +38,7 @@
 </template>
 <script>
 import axios from "@/service/axios";
+import Modal from "../components/Modal/Modal.vue";
 import Listitem from "../ui/Listitem.vue";
 
 export default {
@@ -44,6 +47,8 @@ export default {
     return {
       userList: [],
       isLoading: true,
+      isOpen: false,
+      editId: "",
     };
   },
   methods: {
@@ -66,6 +71,22 @@ export default {
       axios.delete("user/" + id);
       location.reload();
     },
+
+    async isOpenTrue(id) {
+      this.isOpen = true;
+      console.log(id);
+      this.editId = id;
+      try {
+        const postItem = await axios.get("/user/" + this.editId);
+          
+      } catch (error) {
+        console.log(error);
+      }
+    },
+
+    hideModal() {
+      this.isOpen = false;
+    },
   },
   mounted() {
     this.getAllUsers();
@@ -73,7 +94,7 @@ export default {
   updated() {
     console.log("object");
   },
-  components: { Listitem },
+  components: { Listitem, Modal },
 };
 </script>
 <style scoped>
