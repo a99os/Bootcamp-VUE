@@ -1,6 +1,12 @@
 <template>
   <div class="bg-white pt-5 w-1/2 mx-auto min-h-[300px] shadow">
-    <Modal :isOpen="isOpen" @hide="hideModal" />
+    <Modal
+      :isOpen="isOpen"
+      @hide="hideModal"
+      :username="username"
+      :useremail="useremail"
+      @edit="updatePost"
+    />
     <h1 class="text-green-700 text-center text-2xl uppercase font-semibold">
       User list
     </h1>
@@ -38,6 +44,7 @@
 </template>
 <script>
 import axios from "@/service/axios";
+import { toast } from "vue3-toastify";
 import Modal from "../components/Modal/Modal.vue";
 import Listitem from "../ui/Listitem.vue";
 
@@ -49,6 +56,8 @@ export default {
       isLoading: true,
       isOpen: false,
       editId: "",
+      username: "",
+      useremail: "",
     };
   },
   methods: {
@@ -69,7 +78,12 @@ export default {
 
     removeUser(id) {
       axios.delete("user/" + id);
-      location.reload();
+      toast.info("User removed", {
+        autoClose: 1000,
+      });
+      setTimeout(() => {
+        location.reload();
+      }, 1000);
     },
 
     async isOpenTrue(id) {
@@ -78,7 +92,8 @@ export default {
       this.editId = id;
       try {
         const postItem = await axios.get("/user/" + this.editId);
-          
+        this.username = postItem.data.name;
+        this.useremail = postItem.data.email;
       } catch (error) {
         console.log(error);
       }
@@ -86,6 +101,16 @@ export default {
 
     hideModal() {
       this.isOpen = false;
+    },
+
+    updatePost(data) {
+      axios.put("/user/" + this.editId, data);
+      toast.info("User updated", {
+        autoClose: 1000,
+      });
+      setTimeout(() => {
+        location.reload();
+      }, 1000);
     },
   },
   mounted() {

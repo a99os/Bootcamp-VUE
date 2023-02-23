@@ -43,6 +43,7 @@ export default {
     item: Object,
     removeUser: Function,
     isOpen: Boolean,
+    
   },
 };
 </script>
