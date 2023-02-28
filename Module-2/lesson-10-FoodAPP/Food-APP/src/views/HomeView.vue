@@ -1,18 +1,21 @@
 <template>
-  <div>
-    <div class="w-full p-5 bg-slate-300">
-      <h1 class="text-center">Home</h1>
-      <Card :number="number" :incr="increment" />
-    </div>
+  <div class="w-full h-screen p-6 overflow-y-scroll bg-[#252836] text-white">
+    <Header />
+    <Letters />
+    <RouterView :key="$route.fullPath" />
   </div>
 </template>
+
 <script>
-import Card from "../ui/Card.vue";
-
-
+import Header from "@/components/Header/Header.vue";
+import { RouterView } from "vue-router";
+import Letters from "../components/Main/Letters.vue";
 export default {
   name: "HomeView",
-  components: { Card },
+  data() {
+    return {};
+  },
+  components: { Header, Letters },
 };
 </script>
 <style scoped></style>

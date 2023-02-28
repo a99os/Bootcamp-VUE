@@ -2,7 +2,7 @@
   <aside class="pl-[13px] bg-[#1f1d2b] w-[105px] h-screen">
     <RouterLink
       to="/"
-      class="w-[92px] flex justify-center items-center h-[80px]"
+      class="w-[92px] my-4 flex justify-center items-center h-[80px]"
       ><i
         class="bx text-[#ea7c69] bg-[rgba(234,124,105,0.2)] rounded-lg text-3xl w-[56px] h-[56px] flex justify-center items-center bxs-store-alt"
       ></i
@@ -11,7 +11,7 @@
       <li v-for="item in navlink" class="">
         <RouterLink
           :to="item.path"
-          class="w-[92px] flex justify-center rounded-lg items-center h-[80px] bg-[#1F1D2B]"
+          class="w-[92px] my-4 flex justify-center rounded-lg items-center h-[80px] bg-[#1F1D2B]"
           ><i
             :class="`bx text-[#ea7c69] ${item.icon} rounded-lg text-3xl w-[56px] h-[56px] flex justify-center items-center `"
           ></i>
