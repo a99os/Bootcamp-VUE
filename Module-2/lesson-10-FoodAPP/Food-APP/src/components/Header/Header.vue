@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-full bg-[#252836] text-white flex justify-between items-center h-[65px]"
+    class="w-full bg-[#252836] text-white flex gap-5 justify-between items-center h-[65px]"
   >
     <div>
       <h1 class="font-semibold text-[28px] leading-[140%]">Jaegar Resto</h1>
@@ -10,7 +10,7 @@
       </p>
     </div>
     <div
-      class="bg-[#393C49] p-[14px] flex items-center rounded-lg gap-2 w-[220px]"
+      class="bg-[#393C49] flex-grow p-[14px] flex items-center rounded-lg gap-2 w-[220px]"
     >
       <i class="bx bx-search text-[20px]"></i>
       <input
