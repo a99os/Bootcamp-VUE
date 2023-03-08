@@ -40,11 +40,10 @@ export const auth = {
         commit("SET_USERNAME", response.data.username);
         commit("SET_ROLE", response.data.role);
         commit("SET_MESSAGE", null);
-        console.log(response.data);
       } catch (error) {
         console.log(error);
         commit("SET_AUTH", false);
-        commit("SET_MESSAGE", error);
+        commit("SET_MESSAGE", error.response.data.message);
         commit("SET_TOKEN", null);
         commit("SET_USERNAME", null);
         commit("SET_ROLE", null);

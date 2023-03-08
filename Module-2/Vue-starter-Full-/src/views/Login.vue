@@ -23,6 +23,9 @@
           >
             Sign in to your account
           </h1>
+          <p class="text-center text-red-600" v-if="authStatus">
+            {{ authStatus }}
+          </p>
           <form
             class="space-y-4 md:space-y-6"
             @submit="($event) => useAuth($event)"
@@ -111,7 +114,7 @@ export default {
   },
   computed: {
     authStatus() {
-      $store.state.isAuth;
+      return this.$store.state.auth.authMessage;
     },
   },
 };
