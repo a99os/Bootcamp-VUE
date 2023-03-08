@@ -1,11 +1,5 @@
-<template>
-  <Header />
-  <Footer />
-</template>
+<template></template>
 <script>
-import Footer from "../components/Footer/Footer.vue";
-import Header from "../components/Header/Header.vue";
-
-export default { components: { Header, Footer } };
+export default { components: {} };
 </script>
 <style lang=""></style>

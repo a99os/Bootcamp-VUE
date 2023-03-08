@@ -1,7 +1,9 @@
-<script setup></script>
+<script setup>
+import MainApp from "./layout/MainApp.vue";
+</script>
 
 <template>
-  <router-view></router-view>
+  <MainApp />
 </template>
 
 <style scoped></style>
