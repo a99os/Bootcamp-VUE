@@ -6,5 +6,8 @@ export class CreatePostDto {
   title: string;
   @IsNotEmpty()
   @IsString()
+  category: string;
+  @IsNotEmpty()
+  @IsString()
   full_text: string;
 }

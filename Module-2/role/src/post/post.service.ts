@@ -15,7 +15,7 @@ export class PostService {
   ) {}
   async create(createPostDto: CreatePostDto, base_image: any) {
     const category = await this.categoryRepo.findOne({
-      where: { title: createPostDto.title },
+      where: { title: createPostDto.category },
     });
 
     if (!category) {
@@ -23,10 +23,11 @@ export class PostService {
     }
     const post = await this.postRepo.create({
       ...createPostDto,
-      title_id: category.id,
+      category_id: category.id,
     });
     if (base_image) {
       post.base_image = await this.fileService.createFileAdmin(base_image);
+      console.log(post);
       await post.save();
     }
 
@@ -54,17 +55,21 @@ export class PostService {
 
     if (updatePostDto.title) {
       const category = await this.categoryRepo.findOne({
-        where: { title: updatePostDto.title },
+        where: { title: updatePostDto.category },
       });
 
       if (!category) {
         throw new HttpException("Category not found", HttpStatus.NOT_FOUND);
       }
-      post.title_id = category.id;
+      post.category_id = category.id;
       await post.save();
     }
     if (updatePostDto.full_text) {
       post.full_text = updatePostDto.full_text;
+      await post.save();
+    }
+    if (updatePostDto.title) {
+      post.title = updatePostDto.title;
       await post.save();
     }
 

@@ -9,7 +9,8 @@ import {
 import { Category } from "../../category/entities/category.entity";
 
 interface PostAttr {
-  title_id: number;
+  title: string;
+  category_id: number;
   full_text: string;
   base_image: string;
 }
@@ -28,11 +29,15 @@ export class Post extends Model<Post, PostAttr> {
   @Column({
     type: DataType.INTEGER,
   })
-  title_id: number;
+  category_id: number;
 
   @BelongsTo(() => Category)
-  title: Category;
+  category: Category;
 
+  @Column({
+    type: DataType.STRING,
+  })
+  title: string;
   @Column({
     type: DataType.STRING(5000),
   })
