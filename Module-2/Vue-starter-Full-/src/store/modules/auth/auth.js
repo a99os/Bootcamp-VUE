@@ -11,6 +11,7 @@ export const auth = {
   mutations: {
     SET_AUTH(state, payload) {
       state.isAuth = payload;
+      window.localStorage.setItem("auth", state.isAuth);
     },
     SET_USERNAME(state, payload) {
       state.username = payload;
@@ -40,6 +41,7 @@ export const auth = {
         commit("SET_USERNAME", response.data.username);
         commit("SET_ROLE", response.data.role);
         commit("SET_MESSAGE", null);
+        return response;
       } catch (error) {
         console.log(error);
         commit("SET_AUTH", false);

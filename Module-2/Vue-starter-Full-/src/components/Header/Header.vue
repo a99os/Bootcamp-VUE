@@ -16,16 +16,32 @@
           >
         </router-link>
         <div class="flex items-center lg:order-2">
-          <router-link
-            to="/signin"
-            class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800"
-            >Login</router-link
-          >
-          <router-link
-            to="/signup"
-            class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800"
-            >Registration</router-link
-          >
+          <template v-if="!isLoggedIn">
+            <router-link
+              to="/signin"
+              class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800"
+              >Login</router-link
+            >
+            <router-link
+              to="/signup"
+              class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800"
+              >Registration</router-link
+            >
+          </template>
+          <template v-if="isLoggedIn">
+            <h1
+              class="text-primary-700 mx-4 p-5 border border-primary-700 px-4 lg:px-5 py-2 lg:py-2.5 rounded-lg"
+            >
+              {{ getUser }}
+            </h1>
+
+            <button
+              @click="logout"
+              class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800"
+            >
+              Logaout
+            </button>
+          </template>
           <button
             data-collapse-toggle="mobile-menu-2"
             type="button"
@@ -34,6 +50,7 @@
             aria-expanded="false"
           >
             <span class="sr-only">Open main menu</span>
+
             <svg
               class="w-6 h-6"
               fill="currentColor"
@@ -117,6 +134,38 @@
   </header>
 </template>
 <script>
-export default { name: "Header" };
+import { pushScopeId } from "vue";
+
+export default {
+  name: "Header",
+  data() {
+    return {
+      isLogin: null,
+      user: null,
+    };
+  },
+
+  methods: {
+    logout() {
+      localStorage.clear();
+      this.$router.push({ path: "/" });
+      window.location.reload();
+    },
+  },
+
+  computed: {
+    getUser() {
+      return window.localStorage.getItem("username");
+    },
+
+    getRole() {
+      return window.localStorage.getItem("role");
+    },
+
+    isLoggedIn() {
+      return this.$store.state.auth.isAuth || localStorage.getItem("auth");
+    },
+  },
+};
 </script>
 <style lang=""></style>

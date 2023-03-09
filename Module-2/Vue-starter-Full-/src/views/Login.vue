@@ -43,7 +43,6 @@
                 v-model="username"
                 class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                 placeholder="name@company.com"
-                required=""
               />
             </div>
             <div>
@@ -59,7 +58,6 @@
                 id="password"
                 placeholder="••••••••"
                 class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                required=""
               />
             </div>
             <div class="flex items-center justify-between">
@@ -91,6 +89,7 @@
 </template>
 <script>
 import Signin from "@/components/SIgnin/Signin.vue";
+import { toast } from "vue3-toastify";
 
 export default {
   name: "login",
@@ -107,8 +106,18 @@ export default {
       const params = { username: this.username, password: this.password };
       if (!params.username || !params.password) {
         console.log("Please enter a username and password");
+        toast.error("Please enter a username and password");
       } else {
-        this.$store.dispatch("LOGIN_USER", params);
+        this.$store
+          .dispatch("LOGIN_USER", params)
+          .then((response) => {
+            console.log(response);
+            if (response.status == 201) this.$router.push({ path: "/" });
+            toast.success("is logged is successfully");
+          })
+          .catch((error) => {
+            toast.warn("Login or password is incorrect");
+          });
       }
     },
   },
@@ -116,6 +125,9 @@ export default {
     authStatus() {
       return this.$store.state.auth.authMessage;
     },
+  },
+  unmounted() {
+    this.$store.commit("SET_MESSAGE", "");
   },
 };
 </script>
