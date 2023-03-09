@@ -10,8 +10,8 @@ export const auth = {
 
   mutations: {
     SET_AUTH(state, payload) {
-      state.isAuth = payload;
       window.localStorage.setItem("auth", state.isAuth);
+      state.isAuth = payload;
     },
     SET_USERNAME(state, payload) {
       state.username = payload;
