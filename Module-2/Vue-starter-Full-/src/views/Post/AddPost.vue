@@ -343,7 +343,7 @@ export default {
         this.$store.dispatch("ADD_POST", fd).then((res) => {
           if (res) {
             toast.success("added successfully new post");
-            // window.location.replace("/post/list");
+            window.location.replace("/posts");
           } else {
             toast.error(this.$store.state.post.authMessage);
           }
