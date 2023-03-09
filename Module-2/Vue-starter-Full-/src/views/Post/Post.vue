@@ -1,14 +1,14 @@
 <template lang="">
   <div class="container mx-auto">
-    <div class="flex flex-wrap gap-10 justify-start p-10">
+    <div class="flex flex-wrap gap-10 justify-center p-10">
       <div
         v-for="item in getPosts"
-        class="max-w-sm bg-white h-auto flex-grow border lg:min-w-[300px] border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+        class="max-w-sm flex flex-col bg-white h-auto flex-grow border lg:min-w-[300px] border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
       >
         <a href="#">
           <img class="rounded-t-lg" :src="item.base_image" alt="" />
         </a>
-        <div class="p-5">
+        <div class="p-5 flex flex-col gap-5 flex-grow justify-center">
           <a href="#">
             <h5
               class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
@@ -16,7 +16,7 @@
               {{ item.title }}
             </h5>
           </a>
-          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+          <p class="mb-3 font-normal flex-grow text-gray-700 dark:text-gray-400">
             {{ item.full_text }}
           </p>
           <div class="flex justify-between">

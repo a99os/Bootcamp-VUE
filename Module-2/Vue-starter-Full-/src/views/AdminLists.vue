@@ -237,6 +237,7 @@
                 <th scope="col" class="px-4 py-3">full name</th>
                 <th scope="col" class="px-4 py-3">username</th>
                 <th scope="col" class="px-4 py-3">password</th>
+                <th scope="col" class="px-4 py-3">role</th>
                 <th scope="col" class="px-4 py-3">created at</th>
                 <th scope="col" class="px-4 py-3">
                   <span class="sr-only">Actions</span>
@@ -257,6 +258,7 @@
                 <td class="px-4 py-3">{{ item.fullname }}</td>
                 <td class="px-4 py-3">{{ item.username }}</td>
                 <td class="px-4 py-3">{{ item.password }}</td>
+                <td class="px-4 py-3">{{ item.role }}</td>
                 <td class="px-4 py-3">{{ item.createdAt }}</td>
                 <td class="px-4 py-3 flex items-center justify-end">
                   <button
