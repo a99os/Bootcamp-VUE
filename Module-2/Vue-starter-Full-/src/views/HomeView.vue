@@ -1,5 +1,9 @@
-<template></template>
-<script>
-export default { components: {} };
+<script setup>
+
 </script>
-<style lang=""></style>
+
+<template>
+  <main>
+ 
+  </main>
+</template>

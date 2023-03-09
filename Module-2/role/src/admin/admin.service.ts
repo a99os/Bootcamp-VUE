@@ -31,4 +31,31 @@ export class AdminService {
 
     return { role: admin.role, token, username };
   }
+
+  async getAll() {
+    return await this.adminRepo.findAll({
+      include: { all: true },
+      order: [["createdAt", "ASC"]],
+    });
+  }
+
+  getOne(id: number) {
+    return this.adminRepo.findOne({
+      where: { id },
+    });
+  }
+
+  update(id: number, updateAdminDto: UpdateAdminDto) {
+    return this.adminRepo.update(updateAdminDto, { where: { id } });
+  }
+  async remove(id: number) {
+    const admin = await this.getOne(id);
+    if (admin.role == 1) {
+      throw new HttpException(
+        "SUPERADMIN don't deleted",
+        HttpStatus.BAD_REQUEST
+      );
+    }
+    return this.adminRepo.destroy({ where: { id } });
+  }
 }

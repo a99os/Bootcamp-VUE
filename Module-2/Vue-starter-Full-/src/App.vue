@@ -1,5 +1,7 @@
 <script setup>
-import MainApp from "./layout/MainApp.vue";
+
+import MainApp from './layout/MainApp.vue';
+
 </script>
 
 <template>

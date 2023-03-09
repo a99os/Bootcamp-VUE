@@ -12,11 +12,11 @@ export class CategoryService {
   }
 
   findAll() {
-    return this.catgoryRepo.findAll();
+    return this.catgoryRepo.findAll({ include: { all: true } });
   }
 
   findOne(id: number) {
-    return this.catgoryRepo.findOne({ where: { id } });
+    return this.catgoryRepo.findOne({ where: { id }, include: { all: true } });
   }
 
   update(id: number, createCategoryDto: CreateCategoryDto) {

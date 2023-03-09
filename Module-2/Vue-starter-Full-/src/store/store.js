@@ -1,9 +1,20 @@
 import { createStore } from "vuex";
-import { auth } from "./modules/auth/auth.js";
-// import { signup } from "./modules/auth/signup.js";
+import { auth } from "./modules/auth/auth";
+import { admin } from "./modules/admin/createadmin";
+import { category } from "./modules/category/createCategory";
+import { post } from "./modules/post/createPost";
+import { adminActions } from "./modules/admin/actionsAdmin";
+import { categoryActions } from "./modules/category/actionsCategory";
 
 const store = createStore({
-  modules: { auth },
+  modules: {
+    auth,
+    admin,
+    category,
+    categoryActions,
+    adminActions,
+    post,
+  },
 });
 
 export default store;

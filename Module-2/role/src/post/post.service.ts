@@ -23,11 +23,14 @@ export class PostService {
     }
     const post = await this.postRepo.create({
       ...createPostDto,
+      base_image: "",
       category_id: category.id,
     });
+    console.log(base_image);
     if (base_image) {
-      post.base_image = await this.fileService.createFileAdmin(base_image);
-      console.log(post);
+      const image = await this.fileService.createFileAdmin(base_image);
+      console.log("qalesan");
+      post.base_image = image;
       await post.save();
     }
 
@@ -74,5 +77,8 @@ export class PostService {
     }
 
     return await this.findOne(id);
+  }
+  remove(id: number) {
+    return this.postRepo.destroy({ where: { id } });
   }
 }

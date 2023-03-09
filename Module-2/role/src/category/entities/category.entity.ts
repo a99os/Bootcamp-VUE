@@ -1,4 +1,5 @@
-import { Column, DataType, Model, Table } from "sequelize-typescript";
+import { Column, DataType, HasMany, Model, Table } from "sequelize-typescript";
+import { Post } from "../../post/entities/post.entity";
 
 interface CategoryAttr {
   title: string;
@@ -19,4 +20,7 @@ export class Category extends Model<Category, CategoryAttr> {
     unique: true,
   })
   title: string;
+
+  @HasMany(() => Post)
+  posts: Post[];
 }

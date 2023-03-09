@@ -1,17 +1,18 @@
 import axios from "@/service/axios.js";
+
 export const auth = {
   state: () => ({
-    token: null,
     isAuth: false,
-    authMessage: null,
-    username: null,
-    role: null,
+    authMessage: "",
+    token: "",
+    username: "",
+    role: "",
   }),
 
   mutations: {
     SET_AUTH(state, payload) {
-      window.localStorage.setItem("auth", state.isAuth);
       state.isAuth = payload;
+      window.localStorage.setItem("auth", state.isAuth);
     },
     SET_USERNAME(state, payload) {
       state.username = payload;
@@ -22,10 +23,9 @@ export const auth = {
       window.localStorage.setItem("role", state.role);
     },
 
-    SET_MESSAGE(state, payload) {
+    SET_MESSAGES(state, payload) {
       state.authMessage = payload;
     },
-
     SET_TOKEN(state, token) {
       state.token = token;
       window.localStorage.setItem("token", state.token);
@@ -38,17 +38,19 @@ export const auth = {
         const response = await axios.post("/admin/login", payload);
         commit("SET_AUTH", true);
         commit("SET_TOKEN", response.data.token);
+        commit("SET_MESSAGES", "");
         commit("SET_USERNAME", response.data.username);
         commit("SET_ROLE", response.data.role);
-        commit("SET_MESSAGE", null);
+
         return response;
-      } catch (error) {
-        console.log(error);
+      } catch (err) {
+        console.log(err);
+
+        commit("SET_MESSAGES", err.response.data.message);
+        commit("SET_TOKEN", "");
         commit("SET_AUTH", false);
-        commit("SET_MESSAGE", error.response.data.message);
-        commit("SET_TOKEN", null);
-        commit("SET_USERNAME", null);
-        commit("SET_ROLE", null);
+        commit("SET_USERNAME", "");
+        commit("SET_ROLE", "");
       }
     },
   },

@@ -7,7 +7,7 @@ interface AdminAttr {
   role: number;
 }
 
-@Table({ tableName: "admin", timestamps: false })
+@Table({ tableName: "admin" })
 export class Admin extends Model<Admin, AdminAttr> {
   @Column({
     type: DataType.INTEGER,

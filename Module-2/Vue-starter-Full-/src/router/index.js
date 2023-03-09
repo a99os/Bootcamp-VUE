@@ -16,31 +16,50 @@ const router = createRouter({
     },
     {
       path: "/signin",
-      name: "signin",
+      name: "login",
       component: () => import("../views/Login.vue"),
     },
     {
       path: "/signup",
-      name: "signup",
+      name: "registration",
       component: () => import("../views/Registration.vue"),
     },
     {
-      path: "/admin",
-      name: "admin",
-      component: () => import("../views/AdminView.vue"),
+      path: "/addpost",
+      name: "addpost",
+      component: () => import("../views/Post/AddPost.vue"),
     },
     {
-      path: "/admin/:add",
-      name: "admin",
-      component: () => import("../views/AdminView.vue"),
+      path: "/admin",
+      component: () => import("../views/Admin.vue"),
+
       children: [
         {
-          path: "add",
+          path: "/admin/add",
+          name: "add",
           component: () => import("../views/AddAdmin.vue"),
         },
         {
-          path: "list",
-          component: () => import("../views/AdminList.vue"),
+          path: "/admin/list",
+          name: "list",
+          component: () => import("../views/AdminLists.vue"),
+        },
+      ],
+    },
+    {
+      path: "/category",
+      component: () => import("../views/Category/Category.vue"),
+
+      children: [
+        {
+          path: "/category/add",
+          name: "category_add",
+          component: () => import("../views/Category/AddCategory.vue"),
+        },
+        {
+          path: "/category/list",
+          name: "category_list",
+          component: () => import("../views/Category/CategoryList.vue"),
         },
       ],
     },

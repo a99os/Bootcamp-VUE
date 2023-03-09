@@ -46,4 +46,9 @@ export class PostController {
   ) {
     return this.postService.update(+id, updatePostDto, base_image);
   }
+  @SetMetadata("roles", [1, 2])
+  @Delete(":id")
+  remove(@Param("id") id: string) {
+    return this.postService.remove(+id);
+  }
 }
